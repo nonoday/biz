@@ -13,6 +13,10 @@
       inputId : {
         type: String,
         required: true
+      },
+      placeholder: {
+        type: String,
+        default: ''
       }
   });
 
@@ -36,34 +40,7 @@
     }
   })
 
-  // const handleKeydown = (event) => {
-  //   if (event.key === 'Tab') {
-  //     event.preventDefault();
-      
-  //     let nextElement = document.activeElement;
-
-  //     do {
-  //       nextElement = nextElement.nextElementSibling || nextElement.parentNode.nextElementSibling;
-  //     } while (nextElement && !isFocusabel(nextElement));
-
-  //     if (nextElement) {
-  //       nextElement.focus();
-  //     }
-  //   }
-  // }
-  // const isFocusabel = (element) => {
-  //   const focusableElements = [
-  //     'A',
-  //     'AREA',
-  //     'BUTTON',
-  //     'INPUT',
-  //     'SELECT',
-  //     'TEXTAREA',
-  //   ]
-  //   return focusableElements.includes(element.tagName) || element.hasAttribute('tabindex');
-  // };
-
-    // @keydown="handleKeydown"
+  
 </script>
 
 <template>
@@ -72,13 +49,13 @@
     :options="options" 
     :optionLabel="optionLabel"
     :model-value="modelValue"
+    :placeholder="placeholder"
     @update:model-value="updateValue"
     ref="customDropdown"
   />
-  <div style="color:black">dsadsadsadsadsadsadsadsadsadsadsadsa</div>
 </template>
 
 
 <style lang="scss" scoped>
-
+	@use '@/assets/scss/contents/dropdown/dropdown.scss';
 </style>

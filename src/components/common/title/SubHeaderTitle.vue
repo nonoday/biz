@@ -10,6 +10,10 @@
         type: String,
         default : ''
       },
+      tag: {
+        type: String,
+        default: 'h4'
+      }
   });
 
   const subTitleStyle = computed(() => ({
@@ -17,9 +21,9 @@
   }))
 </script>
 <template>
-<h4 class="subHeaderTitle" :style="subTitleStyle">
+<component :is="tag" class="subHeaderTitle" :style="subTitleStyle">
     {{title}}
-</h4>
+</component>
 </template>
 
 <style lang="scss" scoped>

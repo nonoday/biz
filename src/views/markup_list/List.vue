@@ -428,7 +428,7 @@
     <tr>
       <td>신청서 작성</td>
       <td></td>
-      <td></td>
+      <td><a href="/ApplicationFormWrite">ApplicationFormWrite</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -452,7 +452,7 @@
       <td rowspan="3" colspan="1"><div>연계신청내역</div></td>
       <td>목록</td>
       <td></td>
-      <td></td>
+      <td><a href="/Linkage">Linkage</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -474,7 +474,7 @@
       <td rowspan="3" colspan="1"><div>API 인증키 관리</div></td>
       <td>목록</td>
       <td></td>
-      <td></td>
+      <td><a href="/ApiList">ApiList</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -496,7 +496,7 @@
       <td rowspan="3" colspan="1"><div>나의 문의글</div></td>
       <td>목록</td>
       <td></td>
-      <td></td>
+      <td><a href="/InquiryList">InquiryList</a></td>
       <td></td>
       <td></td>
     </tr>

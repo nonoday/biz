@@ -101,6 +101,12 @@ const router = createRouter({
       component: () => import('@/views/communication/TechTipsDetails.vue'),
       meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
     },
+    {
+      path: "/TechTipsWrite",
+      name: '/TechTipsWrite',
+      component: () => import('@/views/communication/TechTipsWrite.vue'),
+      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+    },
 
 
     {
@@ -127,6 +133,18 @@ const router = createRouter({
       component: () => import('@/views/communication/NoticeDetails.vue'),
       meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
     },
+
+    //마이페이지
+    {
+      path: "/mypage/Connections",
+      name: '/mypage/Connections',
+      component: () => import('@/views/mypage/ConnectionsList.vue'),
+      meta: { layout : 'mypage' , title : '목록 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+
+
+
+
   ],
   scrollBehavior() {
     return { top: 0 }

@@ -10,6 +10,14 @@
         type: String,
         default : ''
       },
+      tag: {
+        type: String,
+        default: 'h3'
+      },
+      mypage: {
+        type: Boolean,
+        default: false
+      }
   });
 
   const titleStyle = computed(() => ({
@@ -17,9 +25,9 @@
   }))
 </script>
 <template>
-<h3 class="headerTitle" :style="titleStyle">
+<component :is="tag" class="headerTitle" :class="{ mypage }" :style="titleStyle">
     {{title}}
-</h3>
+</component>
 </template>
 
 <style lang="scss" scoped>
@@ -29,5 +37,12 @@
 	line-height: 150%;		
   font-size:40px;
   letter-spacing: 1px;
+
+  &.mypage {
+    position: absolute;
+    top:40px;
+    left:0;
+    margin-top:0;
+  }
 }
 </style>
