@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import Panel from 'primevue/panel';
-    import './innorix.css';
 
 let box = {}
 const fileMgno = ref('PFM20240000000002095');
@@ -33,24 +32,27 @@ const fileArray = [
   }
 ]
 
-const isText= ref(true);
+const isText = ref(true);
 
 onMounted(() => {
+  if (typeof innorix === 'undefined') {
+    console.error('이노릭스 스크립트가 로드되지 않았습니다.');
+    return;
+  }
+
   const innorixUploadUrl = `/api/innorix/upload`
 
   box = innorix.create({
-    el: '#fileControl', // 컨트롤 출력 HTML 객체 ID
-    agent: false, // true = Agent 설치, false = html5 모드 사용
-    installUrl: '../install/install.html', // Agent 설치 페이지
-    uploadUrl: innorixUploadUrl, // 업로드 URL
+    el: '#fileControl',
+    agent: false,
+    installUrl: '../install/install.html',
+    uploadUrl: innorixUploadUrl,
     width: '100%',
     height: '60px'
   })
 
-
   box.on('afterAddFiles', function (p) {
     console.log('afterAddFiles', p.files)
-    
   })
 
   const ircElements = document.querySelectorAll('.irx-preview-image');
@@ -60,25 +62,36 @@ onMounted(() => {
 
   box.on('uploadComplete', function (p) {
     console.log('uploadComplete', p.files)
-    
     console.log('테스트', isText.value);
     isText.value = !isText.value;
   })
-
-
 })
 </script>
 <template>
 <div class="fileUpload">
-    <Panel header="Upload" >
+    <Panel>
       <div id="fileControl"></div>
-      <button @click="openFileDialog"><span class="blind">파일첨부</span></button>
+      <div style="margin-top:10px;">
+        <button @click="openFileDialog" class="button-krds primary small">파일첨부</button>
+      </div>
     </Panel>
 </div>
 </template>
 
 
 <style lang="scss" scoped>
+.fileUpload {
+  :deep(.irx-empty-download-text) {
+    display: block !important;
+  }
 
+  :deep(.irx-file-button) {
+    display: block !important;
+  }
+
+  button {
+    display: none;
+  }
+}
 </style>
 

@@ -3,9 +3,9 @@
     import CustomDropdown from '@components/common/dropdown/CustomDropdown.vue';
     import CustomInputText from '@components/common/input/CustomInputText.vue';
 	import HeaderTitle from '@/components/common/title/HeaderTitle.vue'
-	import InnorixFileUpload from '@components/common/file/InnorixFileUpload.vue';
-    import FileUpload from 'primevue/fileupload';
-    import RadioButton from 'primevue/radiobutton';
+	// import InnorixFileUpload from '@components/common/file/InnorixFileUpload.vue';
+    // import FileUpload from 'primevue/fileupload';
+    // import RadioButton from 'primevue/radiobutton';
     import ThumbnailList from '@/components/common/thumbnail/ThumbnailList.vue';
 	import DetailBottomButtons from '@/components/common/button/DetailBottomButtons.vue'
 
@@ -96,7 +96,7 @@
 
 		<h5 class="commonBox__subTitle">첨부파일</h5>
 		<div class="commonBox__form">
-            <InnorixFileUpload 
+            <!-- <InnorixFileUpload 
                 :url="uploadPath"
                 :multiple="true"
                 accept="image/*"
@@ -111,7 +111,7 @@
                 cancelLabel="취소"
                 class="custom-upload"
             >
-            </InnorixFileUpload>
+            </InnorixFileUpload> -->
 		</div>
 
 		<h5 class="commonBox__subTitle">내용 <span class="commonBox__essential">*</span></h5>
@@ -133,7 +133,7 @@
 	<DetailBottomButtons
         type="both"
         :leftButtons="[
-            { text: '취소하기기', onClick: handleList, class: 'tertiary' }
+            { text: '취소하기', onClick: handleList, class: 'tertiary' }
         ]"
         :rightButtons="[
             { text: '등록하기', onClick: handleEdit, class: 'primary' },

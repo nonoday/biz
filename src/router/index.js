@@ -90,48 +90,52 @@ const router = createRouter({
 
     // 주소정보 소통창구 Address information communication window
     {
-      path: "/TechTipsList",
-      name: '/TechTipsList',
+      path: "/communication/TechTipsList",
+      name: '/communication/TechTipsList',
       component: () => import('@/views/communication/TechTipsList.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 소통창구  | 주소기반산업지원서비스'},
     },
     {
-      path: "/TechTipsDetails",
-      name: '/TechTipsDetails',
+      path: "/communication/TechTipsDetails",
+      name: '/communication/TechTipsDetails',
       component: () => import('@/views/communication/TechTipsDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 소통창구  | 주소기반산업지원서비스'},
     },
     {
-      path: "/TechTipsWrite",
-      name: '/TechTipsWrite',
+      path: "/communication/TechTipsWrite",
+      name: '/communication/TechTipsWrite',
       component: () => import('@/views/communication/TechTipsWrite.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '쓰기 < 주소정보 소통창구  | 주소기반산업지원서비스'},
     },
-
-
     {
-      path: "/Inquiry",
-      name: '/Inquiry',
+      path: "/communication/Inquiry",
+      name: '/communication/Inquiry',
       component: () => import('@/views/communication/InquiryList.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
     },
     {
-      path: "/InquiryDetails",
-      name: '/InquiryDetails',
+      path: "/communication/InquiryDetails",
+      name: '/communication/InquiryDetails',
       component: () => import('@/views/communication/InquiryDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
     },
     {
-      path: "/Notice",
-      name: '/Notice',
+      path: "/communication/InquiryWrite",
+      name: '/communication/InquiryWrite',
+      component: () => import('@/views/communication/InquiryWrite.vue'),
+      meta: { layout : 'DefaultLayout' , title : '쓰기 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/communication/Notice",
+      name: '/communication/Notice',
       component: () => import('@/views/communication/NoticeList.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 공지사항 < 주소정보 소통창구 | 주소기반산업지원서비스'},
     },
     {
-      path: "/NoticeDetails",
-      name: '/NoticeDetails',
+      path: "/communication/NoticeDetails",
+      name: '/communication/NoticeDetails',
       component: () => import('@/views/communication/NoticeDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : ' | 주소기반산업지원서비스'},
+      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 공지사항 < 주소정보 소통창구 | 주소기반산업지원서비스'},
     },
 
     //마이페이지
@@ -140,6 +144,71 @@ const router = createRouter({
       name: '/mypage/Connections',
       component: () => import('@/views/mypage/ConnectionsList.vue'),
       meta: { layout : 'mypage' , title : '목록 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/ConnectionsDetails",
+      name: '/mypage/ConnectionsDetails',
+      component: () => import('@/views/mypage/ConnectionsDetails.vue'),
+      meta: { layout : 'mypage' , title : '상세 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/ConnectionsModify",
+      name: '/mypage/ConnectionsModify',
+      component: () => import('@/views/mypage/ConnectionsModify.vue'),
+      meta: { layout : 'mypage' , title : '수정 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+
+
+
+
+
+
+
+
+
+
+
+    {
+      path: "/mypage/ApiList",
+      name: '/mypage/ApiList',
+      component: () => import('@/views/mypage/ApiList.vue'),
+      meta: { layout : 'mypage' , title : '목록 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/ApiDetails",
+      name: '/mypage/ApiDetails',
+      component: () => import('@/views/mypage/ApiDetails.vue'),
+      meta: { layout : 'mypage' , title : '상세 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/ApiModify",
+      name: '/mypage/ApiModify',
+      component: () => import('@/views/mypage/ApiModify.vue'),
+      meta: { layout : 'mypage' , title : '수정 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/InquiryList",
+      name: '/mypage/InquiryList',
+      component: () => import('@/views/mypage/InquiryList.vue'),
+      meta: { layout : 'mypage' , title : '목록 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/InquiryDetails",
+      name: '/mypage/InquiryDetails',
+      component: () => import('@/views/mypage/InquiryDetails.vue'),
+      meta: { layout : 'mypage' , title : '상세 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/InquiryDetailsWaiting",
+      name: '/mypage/InquiryDetailsWaiting',
+      component: () => import('@/views/mypage/InquiryDetailsWaiting.vue'),
+      meta: { layout : 'mypage' , title : '상세 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+    },
+    {
+      path: "/mypage/InquiryModify",
+      name: '/mypage/InquiryModify',
+      component: () => import('@/views/mypage/InquiryModify.vue'),
+      meta: { layout : 'mypage' , title : '수정 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
     },
 
 
@@ -153,9 +222,8 @@ const router = createRouter({
 
 router.beforeEach(async (to, from, next) => {
   if(to.path !== '/' && document.getElementById('innorixjs') === null) {
-    injectScript('/assets/innorix/innorix.js', 'innorixjs', 'script');
-
-    injectScript('/assets/innorix/innorix.css', 'innorixcss', 'link');
+    // injectScript('/assets/innorix/innorix.js', 'innorixjs', 'script');
+    // injectScript('/assets/innorix/innorix.css', 'innorixcss', 'link');
 
     import("primevue/resources/themes/lara-light-teal/theme.css") ;
     import("primeicons/primeicons.css");

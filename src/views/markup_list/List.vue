@@ -298,28 +298,28 @@
       <td rowspan="6" colspan="1"><div>주소정보 개발자 소통창구</div></td>
       <td rowspan="3" colspan="1"><div>Tech&amp;Tips</div></td>
       <td>목록</td>
-      <td><a href="/TechTipsList">TechTipsList</a></td>
+      <td><a href="/communication/TechTipsList">TechTipsList</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>상세</td>
-      <td><a href="/TechTipsDetails">TechTipsDetails</a></td>
+      <td><a href="/communication/TechTipsDetails">TechTipsDetails</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>작성</td>
-      <td><a href="/TechTipsWrite">TechTipsWrite</a></td>
+      <td><a href="/communication/TechTipsWrite">TechTipsWrite</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td rowspan="3" colspan="1"><div>토론</div></td>
       <td>목록</td>
-      <td>-</td>
+      <td></td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>Tech&amp;Tips 동일 탭형식</td>
     </tr>
     <tr>
       <td>상세</td>
@@ -337,21 +337,21 @@
       <td rowspan="3" colspan="1"><div>주소정보 문의하기</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/InquiryList">InquiryList</a></td>
+      <td><a href="/communication/InquiryList">InquiryList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
-      <td><a href="/InquiryDetails">InquiryDetails</a></td>
+      <td><a href="/communication/InquiryDetails">InquiryDetails</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>작성</td>
       <td></td>
-      <td></td>
+      <td><a href="/communication/InquiryWrite">InquiryWrite</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -359,14 +359,14 @@
       <td rowspan="2" colspan="1"><div>주소정보 공지사항</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/NoticeList">NoticeList</a></td>
+      <td><a href="/communication/NoticeList">NoticeList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
-      <td><a href="/NoticeDetails">NoticeDetails</a></td>
+      <td><a href="/communication/NoticeDetails">NoticeDetails</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -417,11 +417,11 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="13" colspan="1"><div>마이페이지</div></td>
+      <td rowspan="14" colspan="1"><div>마이페이지</div></td>
       <td rowspan="2" colspan="1"><div>장바구니</div></td>
       <td>장바구니</td>
       <td></td>
-      <td></td>
+      <td><a href="/ShoppingCart">ShoppingCart</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -436,7 +436,7 @@
       <td>나의 즐겨찾기</td>
       <td></td>
       <td></td>
-      <td></td>
+      <td><a href="/Favorites">Favorites</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -444,7 +444,7 @@
       <td>다운로드 신청내역</td>
       <td></td>
       <td></td>
-      <td></td>
+      <td><a href="/ApplicationHistory">ApplicationHistory</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -452,21 +452,21 @@
       <td rowspan="3" colspan="1"><div>연계신청내역</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/Linkage">Linkage</a></td>
+      <td><a href="/mypage/Connections">ConnectionsList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
-      <td></td>
+      <td><a href="/mypage/ConnectionsDetails">ConnectionsDetails</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
       <td></td>
-      <td></td>
+      <td><a href="/mypage/ConnectionsModify">ConnectionsModify</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -474,43 +474,50 @@
       <td rowspan="3" colspan="1"><div>API 인증키 관리</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/ApiList">ApiList</a></td>
+      <td><a href="/mypage/ApiList">ApiList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
-      <td></td>
-      <td></td>
+      <td>Details</td>
+      <td><a href="/mypage/ApiDetails">ApiDetails</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
-      <td></td>
-      <td></td>
+      <td>Modify</td>
+      <td><a href="/mypage/ApiModify">ApiModify</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td rowspan="3" colspan="1"><div>나의 문의글</div></td>
+      <td rowspan="4" colspan="1"><div>나의 문의글</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/InquiryList">InquiryList</a></td>
+      <td><a href="/mypage/InquiryList">InquiryList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
+      <td><a href="/mypage/InquiryDetails">InquiryDetails</a></td>
       <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>상세</td>
+      <td>대기</td>
+      <td><a href="/mypage/InquiryDetailsWaiting">InquiryDetailsWaiting</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
       <td></td>
-      <td></td>
+      <td><a href="/mypage/InquiryModify">InquiryModify</a></td>
       <td></td>
       <td></td>
     </tr>

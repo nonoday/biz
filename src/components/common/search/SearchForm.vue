@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import InputText from 'primevue/inputtext'
 import Button from 'primevue/button'
 import Calendar from 'primevue/calendar'
-import RadioButton from 'primevue/radiobutton'
 
 const props = defineProps({
   placeholder: {
@@ -41,67 +40,80 @@ const emit = defineEmits(['search'])
 <template>
   <div class="searchForm" role="search" aria-label="검색">
     <div class="searchForm__periodSelector">
-      <div class="searchForm__periodGroup" role="radiogroup" aria-label="검색 기간 선택">
-        <div class="searchForm__radio">
-          <RadioButton v-model="selectedPeriod" inputId="period1" name="period" value="1" aria-label="1개월 선택" />
-          <label for="period1" class="p-radiobutton-label">1개월</label>
-        </div>
-        <div class="searchForm__radio">
-          <RadioButton v-model="selectedPeriod" inputId="period3" name="period" value="3" aria-label="3개월 선택" />
-          <label for="period3" class="p-radiobutton-label">3개월</label>
-        </div>
-        <div class="searchForm__radio">
-          <RadioButton v-model="selectedPeriod" inputId="period6" name="period" value="6" aria-label="6개월 선택" />
-          <label for="period6" class="p-radiobutton-label">6개월</label>
-        </div>
+      <div class="searchForm__periodGroup" role="group" aria-label="검색 기간 선택">
+          <Button 
+            class="searchForm__button"
+            :class="{'active': selectedPeriod === '1'}"
+            @click="selectedPeriod = selectedPeriod === '1' ? null : '1'"
+            label="1개월"
+            aria-label="1개월 선택"
+            :aria-pressed="selectedPeriod === '1'"
+          />
+          <Button 
+            class="searchForm__button"
+            :class="{'active': selectedPeriod === '3'}"
+            @click="selectedPeriod = selectedPeriod === '3' ? null : '3'"
+            label="3개월"
+            aria-label="3개월 선택"
+            :aria-pressed="selectedPeriod === '3'"
+          />
+          <Button 
+            class="searchForm__button"
+            :class="{'active': selectedPeriod === '6'}"
+            @click="selectedPeriod = selectedPeriod === '6' ? null : '6'"
+            label="6개월"
+            aria-label="6개월 선택"
+            :aria-pressed="selectedPeriod === '6'"
+          />
       </div>
-      <div class="date-range">
-        <span class="p-float-label">
-          <Calendar 
-            v-model="startDate" 
-            inputId="startDate"
-            :showIcon="true"
-            :maxDate="endDate"
-            dateFormat="yy.mm.dd"
-            aria-label="시작 날짜"
-          />
-          <label for="startDate">시작일</label>
-        </span>
-        <span class="p-float-label">
-          <Calendar 
-            v-model="endDate" 
-            inputId="endDate"
-            :showIcon="true"
-            :minDate="startDate"
-            dateFormat="yy.mm.dd"
-            aria-label="종료 날짜"
-          />
-          <label for="endDate">종료일</label>
-        </span>
+      <div class="searchForm__dateRange">
+        <Calendar 
+          v-model="startDate" 
+          inputId="startDate"
+          :showIcon="true"
+          :maxDate="endDate"
+          dateFormat="yy.mm.dd"
+          placeholder="YYYY.MM.DD"
+          aria-label="시작 날짜"
+        />
+        <label class="blind" for="startDate">시작일</label>
+        <span class="searchForm__dateRangeGap">-</span>
+        <Calendar 
+          v-model="endDate" 
+          inputId="endDate"
+          :showIcon="true"
+          :minDate="startDate"
+          dateFormat="yy.mm.dd"
+          placeholder="YYYY.MM.DD"
+          aria-label="종료 날짜"
+        />
+        <label class="blind" for="endDate">종료일</label>
       </div>
     </div>
     <div class="searchForm__inputBox">
-      <span class="p-float-label p-input-icon-right flex-grow">
-        <InputText 
-          v-model="searchText"
-          id="headerSearch"
-          autocomplete="off"
-          aria-label="검색어 입력"
-        />
-        <i class="pi pi-times cursor-pointer" @click="handleClear" />
-        <label for="headerSearch">{{ placeholder }}</label>
-      </span>
+      <label class="blind" for="headerSearch">{{ placeholder }}</label>
+      <InputText 
+        v-model="searchText"
+        id="headerSearch"
+        autocomplete="off"
+        aria-label="검색어 입력"
+      />
+      <Button @click="handleClear" v-show="searchText" class="clearButton" title="삭제">
+        <span class="blind">삭제</span>
+        <i aria-hidden="true" class="bi bi-x" />
+      </Button>
       <Button 
-        class="p-button-primary" 
-        icon="pi pi-search" 
-        label="검색" 
+        class="searchForm__searchButton" 
         @click="handleSearch"
         aria-label="검색 실행"
-      />
+      >
+        <span class="blind">검색</span>
+      </Button>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/search/search_form';
+
 </style> 

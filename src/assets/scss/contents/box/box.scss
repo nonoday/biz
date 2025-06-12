@@ -5,6 +5,8 @@
     padding:32px;
     border-radius: 12px;
     border:1px solid #B1B8BE;
+    
+    &.noGap {margin:0;}
 
     & + .commonBox {
         margin-top:24px;
@@ -23,6 +25,17 @@
         margin-top:28px;
         font-size:15px;
     }
+    &__tipBox {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        margin-top:28px;
+        padding-left:44px;
+        border-radius: 8px;
+        border:1px solid #D8D8D8;
+        background:#F8F8F8 url('@images/common/bullet/bul_tip01.svg') no-repeat 17px 14px;
+        font-size:17px;
+    }
 
     &__subTitle {
         margin-top:24px;
@@ -38,5 +51,61 @@
     }
     &__number {
         color:#CC0502;
+    }
+
+    &__explanation {
+        display: flex;
+        flex-wrap: wrap;
+        gap:16px 12px;
+        margin-top:24px;
+
+        dt {
+            width:180px;
+            font-size:17px;
+            font-weight: 700;
+        }
+        dd {
+            width: calc(100% - 192px);
+            font-size:17px;
+        }
+    }
+
+    &__radioList {
+        margin-top:16px;
+        li {
+            margin-top:8px;
+
+            &:first-child {
+                margin:0;
+            }
+        }
+    }
+
+    &__information {
+        margin-top:24px;
+        padding-top:24px;
+        border-top:1px solid #C6C6C6;
+    }
+    &__informationCategory {
+        display: inline-flex;
+        align-items: center;
+        height: 24px;
+        padding:0 8px;
+        background: #ECF2FE;
+        color:#325EE6;
+        font-size:15px;
+    }
+    &__informationTitle {
+        margin-top:16px;
+        font-size:21px;
+        font-weight: 700;
+    }
+    &__informationList {
+        li {
+            margin-top:16px;
+            padding-left:20px;
+            background: url('@images/common/bullet/bul_dot01.svg') no-repeat 0 10px / 4px;
+            font-size:17px;
+        }
     }
 }

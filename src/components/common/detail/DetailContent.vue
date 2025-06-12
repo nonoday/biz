@@ -2,11 +2,12 @@
 defineProps({
     content: {
         type: String,
-        required: true
+        required: true,
+        default: ''
     },
     likeCount: {
         type: Number,
-        default: 0
+        default: null
     },
     isLiked: {
         type: Boolean,
@@ -23,8 +24,9 @@ const handleLike = () => {
 
 <template>
     <div class="detailContent">
-        <div v-html="content"></div>
-        <div class="detailContent__likeSection">
+        <div v-if="content && content.trim()" v-html="content"></div>
+        <div v-else class="detailContent__empty">답변 대기중입니다.</div>
+        <div v-if="likeCount !== null" class="detailContent__likeSection">
             <button 
                 class="detailContent__likeButton" 
                 :class="{ 'liked': isLiked }"
@@ -41,6 +43,12 @@ const handleLike = () => {
 .detailContent {
     padding: 40px 0;
     border-bottom:1px solid #B1B8BE;
+
+    &__empty {
+        padding-left:38px;
+        font-size: 24px;
+        font-weight:700;
+    }
 
     :deep(p) {
         margin: 10px 0;

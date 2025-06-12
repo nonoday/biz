@@ -53,22 +53,22 @@
     const dataTableRef = ref(null);
     const sales = ref([
         {
-            status:'승인완료',
-            system:'한국지역정보개발원 (주소기반산업지원서비스)', 
-            overdue:'주소정보 (속성), 주소정보(좌표), 주소정보(도형)', 
+            status:'답변대기',
+            system:'주소소', 
+            category:'기타타', 
             date:'2025.12.12', 
         },
         {
-            status:'승인대기',
-            system:'한국지역정보개발원<br/>(주소기반산업지원서비스)', 
-            overdue:'홍길동', 
+            status:'답변완료',
+            system:'주소소', 
+            category:'기타타', 
             date:'2025.12.12', 
         },
     ]);
 </script>
 
 <template>
-	<HeaderTitle title="연계신청내역" :mypage="true" />
+	<HeaderTitle title="나의 문의글" :mypage="true" />
 	<SearchForm @search="handleSearch" />
 	<SearchResultHeader
         :totalCount="searchResultCount"
@@ -82,13 +82,13 @@
 		<Column header="상태" field="status" style="width:100px;">
 			<template #body="slotProps">
 				<span
-					:class="{ 'pointerColor': slotProps.data.status === '승인완료' }"
+					:class="{ 'pointerColor': slotProps.data.status === '답변완료' }"                                                                                                                                                                                                                                                                                                                                                                                      
 				>
 					{{slotProps.data.status}} 
 				</span>
 			</template>
 		</Column>
-		<Column header="기관명(시스템명)" field="system" class="alignLeft" style="width:332px;">
+		<Column header="기관명(시스템명)" field="system" class="alignLeft" style="width:504px;">
 			<template #body="slotProps">
 				<a 
 					href="#"
@@ -97,16 +97,8 @@
 				</a>
 			</template>
 		</Column>
-		<Column header="연체정보" field="overdue" class="alignLeft" style="width:332px;">
-			<template #body="slotProps">
-				<a 
-					href="#"
-				>
-					{{slotProps.data.overdue}} 
-				</a>
-			</template>
-		</Column>
-		<Column header="신청날짜" field="date" style="width:114px;" />
+		<Column header="유형" field="category" style="width:160px;" />
+		<Column header="신청날짜" field="date" style="width:124px;" />
 	</DataTable>
     <CustomPaginator 
         :rows="10" 
@@ -115,7 +107,6 @@
         @page="handlePageChange"
     />
 </template>
-
 
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/table/datatable';

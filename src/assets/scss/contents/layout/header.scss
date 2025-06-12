@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top:0;
+    border-bottom:1px solid #325DE7;
+
+    &__wrap {
+        height: 168px;
+    }
+    &__inner {
+        height: 112px;
+        border-bottom:1px solid #CDD1D5;
+    }
+    &__utill {
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;
+        margin:0 auto;
+    }
+    &__logo {
+        margin-top:51px;
+        font-size:0;
+    }
+}

@@ -12,64 +12,79 @@
         gap:16px;
     }
 
-    &__inputBox {
-
+    &__periodGroup {
+        display: flex;
+        gap:8px;
     }
-}
 
+    &__button {
+        min-width: 69px;
+        height: 48px;
+        border-radius: 6px;
+        border:1px solid #B1B8BE;
+        background-color: #fff;
+        color:#1d1d1d;
+        font-size:17px;
 
-.search-form {
-  width: 100%;
-  padding: 1rem;
-}
+        &.active {
+          min-width: 95px;
+          padding:0 15px 0 35px;
+          border-color: #256EF4;
+          background: #ECF2FE url('@images/common/bullet/bul_arrow01.svg') no-repeat 15px 16px;
+          color:#256EF4;
+        }
+    }
 
-.period-selector {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
+    &__dateRange {
+        display: flex;
+        :deep(.p-calendar) {
+          .p-inputtext {
+            width:110px;
+            padding:0 0 0 16px;
+            border: none;
+          }
+        }
+        :deep(.p-button) {
+          width: 30px;
+          color: #595959;
+        }
+        .p-calendar {
+          height: 48px;
+          border-radius: 6px;
+          border:1px solid #717171;
+          background-color: #fff;
+        }
+    }
+    &__dateRangeGap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 48px;
+      color:#1E2124;
+    }
 
-.period-group {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
+    &__inputBox {
+      display: inline-flex;
+      align-items: center;
+      width:248px;
+      height: 48px;
+      border:1px solid #58616A;
+      border-radius: 6px;
+      background-color: #fff;
 
-.p-field-checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+      :deep(.p-inputtext) {
+        width:calc(100% - 40px);
+        border:none;
+        background: transparent;
+      }
+    }
 
-.date-range {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.search-input {
-  display: flex;
-  align-items: start;
-  gap: 0.5rem;
-}
-
-.p-checkbox-label {
-  margin-left: 0.5rem;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-}
-
-:deep(.p-calendar) {
-  width: 100%;
-}
-
-:deep(.p-float-label) {
-  width: 100%;
+    &__searchButton {
+        display: inline-block;
+        width: 44px;
+        min-width: 44px;
+        height: 100%;
+        background:  url('@images/common/button/btn_search.svg') no-repeat 8px 16px;
+    }
 }

@@ -68,7 +68,7 @@
 </script>
 
 <template>
-	<HeaderTitle title="연계신청내역" :mypage="true" />
+	<HeaderTitle title="API 인증키 관리" :mypage="true" />
 	<SearchForm @search="handleSearch" />
 	<SearchResultHeader
         :totalCount="searchResultCount"
