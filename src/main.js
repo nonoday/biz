@@ -14,8 +14,18 @@ import router from './router'
 // import '@/assets/scss/_function.scss'
 // import '@/assets/scss/all.scss'
 
-router.beforeEach((to, form, next) => {
-    document.title = to.meta.title || '기본 타이틀';
+router.beforeEach((to, from, next) => {
+    const baseTitle = '주소기반산업지원서비스';
+    const title = to.meta.title || '';
+    const depth2 = to.meta.depth2 || '';
+    const depth3 = to.meta.depth3 || '';
+    
+    let fullTitle = title;
+    if (depth3) fullTitle += ` < ${depth3}`;
+    if (depth2) fullTitle += ` < ${depth2}`;
+    fullTitle += ` | ${baseTitle}`;
+    
+    document.title = fullTitle;
     next();
 });
 const locale_ko = {

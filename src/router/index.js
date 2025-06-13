@@ -19,8 +19,8 @@ const router = createRouter({
       name: '/',
       component: () => import('@/views/markup_list/List.vue'),
       meta: { 
-        layout : 'NoneLayout' , 
-        title : '도로명주소 안내시스템'
+        layout: 'NoneLayout',
+        title: '도로명주소 안내시스템',
       },
     },
     {
@@ -28,8 +28,8 @@ const router = createRouter({
       name: '/list',
       component: () => import('@/views/markup_list/List.vue'),
       meta: { 
-        layout : 'NoneLayout' , 
-        title : '도로명주소 안내시스템'
+        layout: 'NoneLayout',
+        title: '도로명주소 안내시스템',
       },
     },
     {
@@ -37,8 +37,8 @@ const router = createRouter({
       name: '/button',
       component: () => import('@/views/common/Button.vue'),
       meta: { 
-        layout : 'DefaultLayout' , 
-        title : '도로명주소 안내시스템'
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템',
       },
     },
     {
@@ -46,8 +46,8 @@ const router = createRouter({
       name: '/board',
       component: () => import('@/views/common/Board.vue'),
       meta: { 
-        layout : 'DefaultLayout' , 
-        title : '도로명주소 안내시스템'
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템'
       },
     },
     //주소정보 정책소개 Address Information Policy Introduction
@@ -55,7 +55,12 @@ const router = createRouter({
       path: "/policy_introduction/PolicyIntroduction",
       name: '/policy_introduction/PolicyIntroduction',
       component: () => import('@/views/policy_introduction/PolicyIntroduction.vue'),
-      meta: { layout : 'DefaultLayout' , title : '주소정보 활용정책 소개 < 주소정보 정책소개 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '주소정보 활용정책 소개',
+        depth2: '주소정보 정책소개',
+        firstpage: true
+      },
     },
     
     
@@ -67,25 +72,44 @@ const router = createRouter({
       path: "/data_provision/AddressDownload",
       name: '/data_provision/AddressDownload',
       component: () => import('@/views/data_provision/AddressDownload.vue'),
-      meta: { layout : 'DefaultLayout' , title : '주소정보 다운로드 < 주소정보 자료제공 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '주소정보 다운로드',
+        depth2: '주소정보 자료제공'
+      },
     },
     {
       path: "/data_provision/AddressDownloadDetails",
       name: '/data_provision/AddressDownloadDetails',
       component: () => import('@/views/data_provision/AddressDownloadDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : '다운로드 상세 < 주소정보 다운로드 < 주소정보 자료제공 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '다운로드 상세',
+        depth3: '주소정보 다운로드',
+        depth2: '주소정보 자료제공'
+      },
     },
     {
       path: "/data_provision/DataOrganization",
       name: '/data_provision/DataOrganization',
       component: () => import('@/views/data_provision/DataOrganization.vue'),
-      meta: { layout : 'DefaultLayout' , title : '데이터 구성 < 주소정보 다운로드 < 주소정보 자료제공 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '데이터 구성',
+        depth3: '주소정보 다운로드',
+        depth2: '주소정보 자료제공'
+      },
     },
     {
       path: "/data_provision/SchemaComposition",
       name: '/data_provision/SchemaComposition',
       component: () => import('@/views/data_provision/SchemaComposition.vue'),
-      meta: { layout : 'DefaultLayout' , title : '스키마 구성  < 주소정보 다운로드 < 주소정보 자료제공 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '스키마 구성',
+        depth3: '주소정보 다운로드',
+        depth2: '주소정보 자료제공'
+      },
     },
 
     // 주소정보 소통창구 Address information communication window
@@ -93,49 +117,90 @@ const router = createRouter({
       path: "/communication/TechTipsList",
       name: '/communication/TechTipsList',
       component: () => import('@/views/communication/TechTipsList.vue'),
-      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 소통창구  | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '목록',
+        depth3: '주소정보 소통창구',
+        depth2: '주소정보 소통창구',
+        firstpage: true
+      },
     },
     {
       path: "/communication/TechTipsDetails",
       name: '/communication/TechTipsDetails',
       component: () => import('@/views/communication/TechTipsDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 소통창구  | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '상세',
+        depth3: '주소정보 소통창구',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
       path: "/communication/TechTipsWrite",
       name: '/communication/TechTipsWrite',
       component: () => import('@/views/communication/TechTipsWrite.vue'),
-      meta: { layout : 'DefaultLayout' , title : '쓰기 < 주소정보 소통창구  | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '쓰기',
+        depth3: '주소정보 소통창구',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
-      path: "/communication/Inquiry",
-      name: '/communication/Inquiry',
+      path: "/communication/InquiryList",
+      name: '/communication/InquiryList',
       component: () => import('@/views/communication/InquiryList.vue'),
-      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '목록',
+        depth3: '주소정보 문의하기',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
       path: "/communication/InquiryDetails",
       name: '/communication/InquiryDetails',
       component: () => import('@/views/communication/InquiryDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '상세',
+        depth3: '주소정보 문의하기',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
       path: "/communication/InquiryWrite",
       name: '/communication/InquiryWrite',
       component: () => import('@/views/communication/InquiryWrite.vue'),
-      meta: { layout : 'DefaultLayout' , title : '쓰기 < 주소정보 문의하기 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '쓰기',
+        depth3: '주소정보 문의하기',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
-      path: "/communication/Notice",
-      name: '/communication/Notice',
+      path: "/communication/NoticeList",
+      name: '/communication/NoticeList',
       component: () => import('@/views/communication/NoticeList.vue'),
-      meta: { layout : 'DefaultLayout' , title : '목록 < 주소정보 공지사항 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '목록',
+        depth3: '주소정보 공지사항',
+        depth2: '주소정보 소통창구'
+      },
     },
     {
       path: "/communication/NoticeDetails",
       name: '/communication/NoticeDetails',
       component: () => import('@/views/communication/NoticeDetails.vue'),
-      meta: { layout : 'DefaultLayout' , title : '상세 < 주소정보 공지사항 < 주소정보 소통창구 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '상세',
+        depth3: '주소정보 공지사항',
+        depth2: '주소정보 소통창구'
+      },
     },
 
     //마이페이지
@@ -143,72 +208,113 @@ const router = createRouter({
       path: "/mypage/Connections",
       name: '/mypage/Connections',
       component: () => import('@/views/mypage/ConnectionsList.vue'),
-      meta: { layout : 'mypage' , title : '목록 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '목록',
+        depth3: '연계신청내역',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/ConnectionsDetails",
       name: '/mypage/ConnectionsDetails',
       component: () => import('@/views/mypage/ConnectionsDetails.vue'),
-      meta: { layout : 'mypage' , title : '상세 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '상세',
+        depth3: '연계신청내역',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/ConnectionsModify",
       name: '/mypage/ConnectionsModify',
       component: () => import('@/views/mypage/ConnectionsModify.vue'),
-      meta: { layout : 'mypage' , title : '수정 < 연계신청내역 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '수정',
+        depth3: '연계신청내역',
+        depth2: '마이페이지'
+      },
     },
-
-
-
-
-
-
-
-
-
-
 
     {
       path: "/mypage/ApiList",
       name: '/mypage/ApiList',
       component: () => import('@/views/mypage/ApiList.vue'),
-      meta: { layout : 'mypage' , title : '목록 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '목록',
+        depth3: 'API 인증키 관리',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/ApiDetails",
       name: '/mypage/ApiDetails',
       component: () => import('@/views/mypage/ApiDetails.vue'),
-      meta: { layout : 'mypage' , title : '상세 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '상세',
+        depth3: 'API 인증키 관리',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/ApiModify",
       name: '/mypage/ApiModify',
       component: () => import('@/views/mypage/ApiModify.vue'),
-      meta: { layout : 'mypage' , title : '수정 < API 인증키 관리 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '수정',
+        depth3: 'API 인증키 관리',
+        depth2: '마이페이지',
+        firstpage: true
+      },
     },
     {
       path: "/mypage/InquiryList",
       name: '/mypage/InquiryList',
       component: () => import('@/views/mypage/InquiryList.vue'),
-      meta: { layout : 'mypage' , title : '목록 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '목록',
+        depth3: '나의 문의글',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/InquiryDetails",
       name: '/mypage/InquiryDetails',
       component: () => import('@/views/mypage/InquiryDetails.vue'),
-      meta: { layout : 'mypage' , title : '상세 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '상세',
+        depth3: '나의 문의글',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/InquiryDetailsWaiting",
       name: '/mypage/InquiryDetailsWaiting',
       component: () => import('@/views/mypage/InquiryDetailsWaiting.vue'),
-      meta: { layout : 'mypage' , title : '상세 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '상세',
+        depth3: '나의 문의글',
+        depth2: '마이페이지'
+      },
     },
     {
       path: "/mypage/InquiryModify",
       name: '/mypage/InquiryModify',
       component: () => import('@/views/mypage/InquiryModify.vue'),
-      meta: { layout : 'mypage' , title : '수정 < 나의 문의글 < 마이페이지 | 주소기반산업지원서비스'},
+      meta: { 
+        layout: 'mypage',
+        title: '수정',
+        depth3: '나의 문의글',
+        depth2: '마이페이지'
+      },
     },
 
 
