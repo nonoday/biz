@@ -421,14 +421,14 @@
       <td rowspan="2" colspan="1"><div>장바구니</div></td>
       <td>장바구니</td>
       <td></td>
-      <td><a href="/ShoppingCart">ShoppingCart</a></td>
+      <td><a href="/mypage/ShoppingCart">ShoppingCart</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>신청서 작성</td>
       <td></td>
-      <td><a href="/ApplicationFormWrite">ApplicationFormWrite</a></td>
+      <td><a href="/mypage/ApplicationFormWrite">ApplicationFormWrite</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -436,7 +436,7 @@
       <td>나의 즐겨찾기</td>
       <td></td>
       <td></td>
-      <td><a href="/Favorites">Favorites</a></td>
+      <td><a href="/mypage/Favorites">Favorites</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -444,7 +444,7 @@
       <td>다운로드 신청내역</td>
       <td></td>
       <td></td>
-      <td><a href="/ApplicationHistory">ApplicationHistory</a></td>
+      <td><a href="/mypage/ApplicationHistory">ApplicationHistory</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -452,7 +452,7 @@
       <td rowspan="3" colspan="1"><div>연계신청내역</div></td>
       <td>목록</td>
       <td></td>
-      <td><a href="/mypage/Connections">ConnectionsList</a></td>
+      <td><a href="/mypage/ConnectionsList">ConnectionsList</a></td>
       <td></td>
       <td></td>
     </tr>

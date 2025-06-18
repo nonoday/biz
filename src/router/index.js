@@ -41,10 +41,20 @@ const router = createRouter({
         title: '도로명주소 안내시스템',
       },
     },
+    
     {
       path: "/board",
       name: '/board',
       component: () => import('@/views/common/Board.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템'
+      },
+    },
+    {
+      path: "/AddressCardSample",
+      name: '/AddressCardSample',
+      component: () => import('@/views/common/AddressCardSample.vue'),
       meta: { 
         layout: 'DefaultLayout',
         title: '도로명주소 안내시스템'
@@ -205,8 +215,30 @@ const router = createRouter({
 
     //마이페이지
     {
-      path: "/mypage/Connections",
-      name: '/mypage/Connections',
+      path: "/mypage/Favorites",
+      name: '/mypage/Favorites',
+      component: () => import('@/views/mypage/Favorites.vue'),
+      meta: { 
+        layout: 'mypage',
+        title: 'd',
+        depth3: '나의 즐겨찾기',
+        depth2: '마이페이지'
+      },
+    },
+    {
+      path: "/mypage/ApplicationHistory",
+      name: '/mypage/ApplicationHistory',
+      component: () => import('@/views/mypage/ApplicationHistory.vue'),
+      meta: { 
+        layout: 'mypage',
+        title: '목록',
+        depth3: '다운로드 신청내역',
+        depth2: '마이페이지'
+      },
+    },
+    {
+      path: "/mypage/ConnectionsList",
+      name: '/mypage/ConnectionsList',
       component: () => import('@/views/mypage/ConnectionsList.vue'),
       meta: { 
         layout: 'mypage',

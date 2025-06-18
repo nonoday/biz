@@ -43,7 +43,6 @@
 		content="<div><img src='' alt='테스트' /></div><p>일반 텍스트</p>"
 	/>
 
-
     <DetailBottomButtons
         type="both"
         :leftButtons="[

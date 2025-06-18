@@ -1,9 +1,7 @@
 <script setup>
-	import { ref, onMounted, computed } from 'vue'
+	import { ref, onMounted, computed, defineAsyncComponent } from 'vue'
 	import HorizontalBoard from '@/components/common/board/HorizontalBoard.vue'
 	import CommonTab from '@/components/common/tab/CommonTab.vue'
-	import TechTipsContent from './tabs/TechTipsContent.vue'
-	import DiscussionContent from './tabs/DiscussionContent.vue'
 	import HeaderTitle from '@/components/common/title/HeaderTitle.vue'
 	import SubHeaderTitle from '@/components/common/title/SubHeaderTitle.vue'
 
@@ -34,11 +32,11 @@
 	const tabConfig = [
 		{
 			header: 'Tech&Tips',
-			content: TechTipsContent
+			component: defineAsyncComponent(() => import('@/components/content/tab/communication/TechTipsContent.vue'))
 		},
 		{
 			header: '토론',
-			content: DiscussionContent
+			component: defineAsyncComponent(() => import('@/components/content/tab/communication/DiscussionContent.vue'))
 		}
 	]
 </script>

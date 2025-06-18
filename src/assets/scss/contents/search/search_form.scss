@@ -7,6 +7,10 @@
     border-radius: 12px;
     background: #EEF2F7;
 
+    &.type01 {
+      margin-top:24px;
+    }
+
     &__periodSelector {
         display: flex;
         gap:16px;

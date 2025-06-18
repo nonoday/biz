@@ -8,6 +8,10 @@ const props = defineProps({
   placeholder: {
     type: String,
     default: '검색어를 입력해주세요.'
+  },
+  type01: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -38,7 +42,7 @@ const emit = defineEmits(['search'])
 </script>
 
 <template>
-  <div class="searchForm" role="search" aria-label="검색">
+  <div class="searchForm" :class="{ 'type01': type01 }" role="search" aria-label="검색">
     <div class="searchForm__periodSelector">
       <div class="searchForm__periodGroup" role="group" aria-label="검색 기간 선택">
           <Button 

@@ -54,7 +54,7 @@ const props = defineProps({
   &__button {
     display: inline-block;
     padding-right:20px;
-    background: url('@images/common/button/btn_download.png') no-repeat right 6px;
+    background: url('@images/common/button/btn_download.svg') no-repeat right 7px;
     
   }
 }
