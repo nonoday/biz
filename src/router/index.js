@@ -5,15 +5,7 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     
-    // {
-    //   path: "/",
-    //   name: '/',
-    //   component: () => import('@/views/main/index.vue'),
-    //   meta: { 
-    //     layout : 'NoneLayout' , 
-    //     title : '도로명주소 안내시스템'
-    //   },
-    // },
+
     {
       path: "/",
       name: '/',
@@ -21,6 +13,7 @@ const router = createRouter({
       meta: { 
         layout: 'NoneLayout',
         title: '도로명주소 안내시스템',
+        depth2: '샘플'
       },
     },
     {
@@ -30,6 +23,7 @@ const router = createRouter({
       meta: { 
         layout: 'NoneLayout',
         title: '도로명주소 안내시스템',
+        depth2: '샘플',
       },
     },
     {
@@ -39,6 +33,7 @@ const router = createRouter({
       meta: { 
         layout: 'DefaultLayout',
         title: '도로명주소 안내시스템',
+        depth2: '샘플'
       },
     },
     
@@ -48,7 +43,8 @@ const router = createRouter({
       component: () => import('@/views/common/Board.vue'),
       meta: { 
         layout: 'DefaultLayout',
-        title: '도로명주소 안내시스템'
+        title: '도로명주소 안내시스템',
+        depth2: '샘플',
       },
     },
     {
@@ -57,7 +53,8 @@ const router = createRouter({
       component: () => import('@/views/common/AddressCardSample.vue'),
       meta: { 
         layout: 'DefaultLayout',
-        title: '도로명주소 안내시스템'
+        title: '도로명주소 안내시스템',
+        depth2: '샘플',
       },
     },
 
@@ -67,7 +64,8 @@ const router = createRouter({
       component: () => import('@/views/common/SearchResultHeaderSample.vue'),
       meta: { 
         layout: 'DefaultLayout',
-        title: '도로명주소 안내시스템'
+        title: '도로명주소 안내시스템',
+        depth2: '샘플',
       },
     },
 

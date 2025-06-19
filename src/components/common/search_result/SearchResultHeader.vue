@@ -83,51 +83,7 @@ const getResultText = () => {
     </div>
 </template>
 
+
 <style lang="scss" scoped>
-.searchResultHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top:40px;
-
-    &__result {
-        color:#1d1d1d;
-        font-size:19px;
-        font-weight: 700;
-    }
-    &__count {
-        color:#004fd3;
-    }
-    &__function {
-        display: flex;
-        gap:12px;
-    }
-    &__title {
-        color:#1D1D1D;
-        font-size:17px;
-    }
-    &__filter {
-        display: flex;
-        align-items: center;
-        gap:12px;
-    }
-    &__button {
-        display: inline-block;
-        height: 26px;
-        padding:0 4px;
-        color:#1D1D1D;
-        font-size:17px;
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &.active {
-            border-radius: 4px;
-            background-color: #EEF2F7;
-        }
-    }
-}
-
-</style> 
+	@use '@/assets/scss/contents/search/searchResultHeader';
+</style>
