@@ -8,7 +8,7 @@ $btn-size-xlarge : 64px;
 $btn-size-large : 56px;
 $btn-size-middle : 48px;
 $btn-size-small : 40px;
-$btn-size-xsmall : 40px;
+$btn-size-xsmall : 32px;
 
 
 // Button Padding Variables
@@ -77,7 +77,9 @@ $btn-radius: 4px;
 		font-size:15px;
 	}
 	&.xsmall {
+		padding:0 10px;
 		height: $btn-size-xsmall;
+		font-size:15px;
 	}
 
 	&:disabled {

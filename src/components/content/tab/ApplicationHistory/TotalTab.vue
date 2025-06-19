@@ -4,21 +4,13 @@
   import Checkbox from 'primevue/checkbox'
   import DataTable from 'primevue/datatable'
   import Column from 'primevue/column'
-  import DetailBottomButtons from '@/components/common/button/DetailBottomButtons.vue'
-
+  
   const items = ref([])
   const selectAll = ref(false)
   const selectedItems = ref([])
   const selectedTableRows = ref({}) // 각 항목별로 선택된 행들을 관리
   const expandedItems = ref(new Set()) // 각 아이템별로 테이블 표시 상태를 관리
 	
-	const handleCancle = () => {
-		console.log('삭제');
-	}	
-	const handleApp = () => {
-		console.log('목록');
-	}
-
   // 파일 다운로드 함수
   const handleFileDownload = (row, item) => {
     console.log('파일 다운로드:')
@@ -137,7 +129,7 @@
       </div>
       <div class="downloadRequestDetails__function">
         <Button class="downloadRequestDetails__more" title="상세 테이블 보기" @click="toggleDetail(item.id)">상세보기</Button>
-        <Button class="downloadRequestDetails__allDownload" title="전체 다운로드">다운로드</Button>
+        <Button class="button-krds tertiary xsmall" title="전체 다운로드">다운로드</Button>
       </div>
       <div v-if="expandedItems.has(item.id)" class="downloadRequestDetails__tableBox">
         <DataTable 
@@ -172,7 +164,7 @@
                   <Button 
                     title="파일 다운로드"
                     @click="handleFileDownload(slotProps.data, item)"
-                    class="downloadRequestDetails__allDownload"
+                    class="button-krds tertiary xsmall"
                     :disabled="!slotProps.data.canDownload"
                   >
                     다운로드
@@ -184,15 +176,6 @@
     </li>
   </ul>
 
-  <DetailBottomButtons
-      type="both"
-      :leftButtons="[
-          { text: '취소하기', onClick: handleCancle, class: 'tertiary xlarge' }
-      ]"
-      :rightButtons="[
-          { text: '신청하기', onClick: handleApp, class: 'primary xlarge' },
-      ]"
-  />
 </template>
 
 

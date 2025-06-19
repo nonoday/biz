@@ -51,6 +51,32 @@
             .pointerColor02 {
                 color:#8E8E8E;
             }
+
+            .dataList {
+                display: flex;
+                gap:8px;
+                flex-wrap: wrap;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap:2px;
+                    height: 32px;
+                    padding:0 10px;
+                    border:1px solid #C6C6C6;
+                    border-radius: 100px;
+                    color:#1D1D1D;
+                    font-size:15px;
+
+                    .del {
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background:#CDD1D5 url('@images/common/button/btn_delete02.svg') no-repeat 50%;
+                        
+                    }
+                }
+            }
         }
     }
 }

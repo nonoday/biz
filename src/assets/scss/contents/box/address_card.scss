@@ -77,4 +77,27 @@
         font-size: 17px;
         font-weight: normal;
     }
+    &__function {
+        display: flex;
+        gap:8px;
+        margin-top:24px;
+    }
+    &__download {
+        display: inline-block;
+        min-width: 87px;
+        height: 32px;
+        padding:0 26px 0 2px;
+        background: url('@images/common/button/btn_download.svg') no-repeat right 50%; 
+        color:#1d1d1d;
+        font-size:17px;
+    }
+    &__detail {
+        display: inline-block;
+        min-width: 102px;
+        height: 32px;
+        padding:0 26px 0 2px;
+        background: url('@images/common/button/btn_move.svg') no-repeat right 50%; 
+        color:#1d1d1d;
+        font-size:17px;
+    }
 }

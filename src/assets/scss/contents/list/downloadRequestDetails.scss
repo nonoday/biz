@@ -47,6 +47,12 @@
         display: flex;
         gap:8px;
     }
+    &__delete {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url('@images/common/button/btn_delete01.svg') no-repeat 50%;
+    }
     &__badge {
         position: relative;
         display: flex;
@@ -54,6 +60,12 @@
         padding-left:24px;
         background: url('@images/common/bullet/bul_divider.svg') no-repeat 0 4px;
         gap:4px;
+
+        &.type01 {
+            margin-left:8px;
+            padding:0;
+            background: none;
+        }
     }
     &__dateBox {
         display: flex;
@@ -66,7 +78,7 @@
         font-weight: normal;
     }
     &__category {
-        margin-top:16px;
+        margin-top:19px;
         color:#1D1D1D;
         font-weight: 700;
         font-size: 19px;

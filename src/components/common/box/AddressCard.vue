@@ -190,8 +190,8 @@ const handleLike = () => {
     
     <!-- 액션 버튼들 -->
     <div class="addressCard__function">
-      <Button class="download" v-if="showDownloadButton" @click="handleDownload">다운로드</Button>
-      <Button class="detail" v-if="showDetailButton" @click="handleDetail">자세히보기</Button>
+      <Button class="addressCard__download" v-if="showDownloadButton" @click="handleDownload">다운로드</Button>
+      <Button class="addressCard__detail" v-if="showDetailButton" @click="handleDetail">자세히보기</Button>
     </div>
   </div>
 </template>

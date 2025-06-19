@@ -215,12 +215,36 @@ const router = createRouter({
 
     //마이페이지
     {
+      path: "/mypage/ShoppingCart",
+      name: '/mypage/ShoppingCart',
+      component: () => import('@/views/mypage/ShoppingCart.vue'),
+      meta: { 
+        layout: 'mypage',
+        title: '목록',
+        depth3: '장바구니',
+        depth2: '마이페이지'
+      },
+    },
+    {
+      path: "/mypage/ApplicationFormWrite",
+      name: '/mypage/ApplicationFormWrite',
+      component: () => import('@/views/mypage/ApplicationFormWrite.vue'),
+      meta: { 
+        layout: 'mypage',
+        title: '신청서 작성',
+        depth3: '장바구니',
+        depth2: '마이페이지'
+      },
+    },
+
+
+    {
       path: "/mypage/Favorites",
       name: '/mypage/Favorites',
       component: () => import('@/views/mypage/Favorites.vue'),
       meta: { 
         layout: 'mypage',
-        title: 'd',
+        title: '목록',
         depth3: '나의 즐겨찾기',
         depth2: '마이페이지'
       },

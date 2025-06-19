@@ -55,6 +55,11 @@
   />
 </template>
 
+<style>
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+        padding:10px;
+    }
+  </style>
 
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/dropdown/dropdown.scss';

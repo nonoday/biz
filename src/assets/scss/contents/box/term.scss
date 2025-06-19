@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.term {
+    overflow-y: auto;
+    height: 100px;
+    margin-top:24px;
+
+    &__title {
+        color:#1d1d1d;
+        font-size:19px;
+        font-weight: 700;
+        .essential {
+            color:#CD0603;
+        }
+    }
+    &__subTitle {
+        margin-top:16px;
+        font-size:17px;
+        font-weight: 700;
+    }
+
+    &__list {
+        margin-top:16px;
+
+        li {
+            margin-top:16px;
+        }
+    }
+
+    &__checkBox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 74px;
+        margin-top:16px;
+        padding:0 24px;
+        border-radius: 10px;
+        background: #EEF2F7;
+    }
+    &__checkBoxTitle {
+        font-size:17px;
+    }
+    &__checkBoxRadio {
+        display: flex;
+        gap:24px;
+    }
+}

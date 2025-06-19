@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+
+.shoppingCart {
+    display: flex;
+    justify-content: space-between;
+    &__address {
+        width: 520px;
+    }
+
+    &__information {
+        width: 344px;
+    }
+    &____organize {
+        padding-bottom:16px;
+        border-bottom:1px solid #C6C6C6;
+        font-size:21px;
+        text-align: center;
+    }
+    &__application {
+
+    }
+}
