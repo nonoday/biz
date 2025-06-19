@@ -60,6 +60,28 @@ const router = createRouter({
         title: '도로명주소 안내시스템'
       },
     },
+
+    {
+      path: "/SearchResultHeaderSample",
+      name: '/SearchResultHeaderSample',
+      component: () => import('@/views/common/SearchResultHeaderSample.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템'
+      },
+    },
+
+
+
+
+
+
+
+
+
+
+
+
     //주소정보 정책소개 Address Information Policy Introduction
     {
       path: "/policy_introduction/PolicyIntroduction",

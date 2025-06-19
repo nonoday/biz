@@ -4,11 +4,14 @@
     import Column from 'primevue/column';
     import RadioButton from 'primevue/radiobutton';
     import Checkbox from 'primevue/checkbox';
+	import Button from 'primevue/button'
 
     import CustomDropdown from '@components/common/dropdown/CustomDropdown.vue';
     import CustomInputText from '@components/common/input/CustomInputText.vue';
 	import HeaderTitle from '@/components/common/title/HeaderTitle.vue'
 	import DetailBottomButtons from '@/components/common/button/DetailBottomButtons.vue'
+    import PersonalTerms from '@/components/common/term/PersonalTerms.vue'
+    import PrivacyConsent from '@/components/common/term/PrivacyConsent.vue'
 
     //인풋
     const currentAddress = ref('');
@@ -26,8 +29,6 @@
     const organizationType = ref('personal');
     // 시스템 개요 라디오 버튼
     const systemOverview = ref('internet');
-    // 약관
-    const organizationType2 = ref('personal2');
 
 
 	const handleList = () => {
@@ -203,29 +204,10 @@
     </div>
     <div class="commonBox">
 		<h4 class="commonBox__title">약관동의</h4>
-        <div class="term">
-            <p class="term__title"><span class="essential">[필수]</span> 개인정보의 수집 및 이용</p>
-            <p class="term__subTitle">[별지 제2호 서식]</p>
-            <ul class="term__list">
-                <li>주의(유의)사항 안내.</li>
-                <li>이 자료를 사용할 때에는 도로명주소법, 국가공간정보기본법, 공간정보의 구축 및 관리 등에 관한 법률, 
-                    행정안전부 공간정보 보안관리 규정 등 관련 법령 및 규정을 준수하여야 합니다.</li>
-            </ul>
-        </div>
-        <div class="term__checkBox">
-            <p class="term__checkBoxTitle">개인정보 수집 및 이용에 대한 약관을 읽고 동의합니다.</p>
-
-            <ul class="term__checkBoxRadio">
-                <li>
-                    <RadioButton v-model="organizationType2" value="personal2" inputId="personal2" />
-                    <label for="personal2">개인</label>
-                </li>
-                <li>
-                    <RadioButton v-model="organizationType2" value="corporate2" inputId="corporate2" />
-                    <label for="corporate2">법인</label>
-                </li>
-            </ul>
-        </div>
+        <PersonalTerms 
+            personalLabel="동의안함" 
+            corporateLabel="동의함" 
+        />
     </div>
 
 	<DetailBottomButtons

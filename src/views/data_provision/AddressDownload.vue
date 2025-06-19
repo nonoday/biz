@@ -2,119 +2,41 @@
 	import { ref, onMounted, computed } from 'vue'
     import Button from 'primevue/button'
 
-	const addressList = ref([
-		{
-			division: '공개하는 주소',
-			badge: 'TXT',
-			title: '도로명이 부여된 도로 도형',
-			description: '도로명주소 기준의 DB 약 600만여 건의 한글 도로명주소로 구성',
-			updateDate: '2025.04.21'
-		}
-	])
+	import HeaderTitle from '@/components/common/title/HeaderTitle.vue'
+	import SubHeaderTitle from '@/components/common/title/SubHeaderTitle.vue'
+	import SearchResultHeader from '@/components/common/search_result/SearchResultHeader.vue'
+
+
 </script>
 
 <template>
-	<div class="contentHeader">
-		<h2>주소정보 다운로드</h2>
-	</div>
-	
+	<HeaderTitle title="주소정보 다운로드" />
 	<div>
-		<h3>주소정보 상세검색</h3>
+		<SubHeaderTitle title="주소정보 큐레이션" />
 		<div>
-			<Button title="큐레이션으로 보기">데이터를 추천받고 싶으신 가요? <span>큐레이션 바로가기</span></Button>
+			<Button title="큐레이션으로 보기">데이터 상세검색이 필요하신가요? <span>상세검색 바로가기</span></Button>
 		</div>
 	</div>
 
-	<div class="addressInformationDetails__filter">
-		<div class="addressInformationDetails__category">
-			
-			<div class="addressInformationDetails__header">데이터 구분</div>
-			<div class="addressInformationDetails__content">
-				<ul class="addressInformationDetails__categoryList">
-					<li>전체</li>
-					<li>공개하는 주소</li>
-					<li>제공하는 주소</li>
-				</ul>
-			</div>
+	<ul>
+		<li><Button title="전체보기">전체</Button></li>
+		<li><Button title="주소보기">주소</Button></li>
+		<li><Button title="도로보기">도로</Button></li>
+		<li><Button title="건물보기">건물</Button></li>
+		<li><Button title="출입구보기">출입구</Button></li>
+		<li><Button title="사물보기">사물</Button></li>
+		<li><Button title="시설물보기">시설물</Button></li>
+		<li><Button title="기타정보보기">기타정보</Button></li>
+	</ul>
 
-		</div>
-		<div class="addressInformationDetails__category">
-			<div class="addressInformationDetails__header">데이터 유형</div>
-			<div class="addressInformationDetails__content">
-				<ul class="addressInformationDetails__categoryList">
-					<li>전체</li>
-					<li>TXT</li>
-					<li>SHP</li>
-					<li>JSON</li>
-				</ul>
-			</div>
-		</div>
-		<div class="addressInformationDetails__category">
-			<div class="addressInformationDetails__header">카테고리</div>
-			<div class="addressInformationDetails__content">
-				<ul class="addressInformationDetails__categoryList">
-					<li>전체</li>
-					<li>도로명주소 한글</li>
-					<li>도로명주소 영문</li>
-					<li>상세주소 표시</li>
-					<li>상세주소 동 표시</li>
-					<li>사물주소</li>
-					<li>도로명</li>
-					<li>건물 DB</li>
-					<li>주소 DB</li>
-					<li>사서함주소 DB</li>
-					<li>영문도로명주소 DB</li>
-					<li>상세주소 DB</li>
-					<li>도로명주소 출입구 정보</li>
-				</ul>
-			</div>
-		</div>
-		<div class="addressInformationDetails__category">
-			<div class="addressInformationDetails__header">선택한 주소 데이터</div>
-			<div class="addressInformationDetails__content">
-				<ul class="addressInformationDetails__categoryList">
-					<li>도로명주소 한글</li>
-					<li>도로명주소 영문</li>
-					<li>상세주소 표시</li>
-					<li>상세주소 동 표시</li>
-				</ul>
-			</div>
-		</div>
-		<div class="addressInformationDetails__category">
-			<div class="addressInformationDetails__header">날짜 선택</div>
-			<div class="addressInformationDetails__content">
-
-			</div>
-		</div>
-	</div>
-
-	<div class="addressInformationDetails__searchResults">
-		<p class="addressInformationDetails__resultsText">공개하는 주소 <strong>2</strong>건, 제공하는 주소 <strong>2</strong>건이 검색되었습니다.</p>
-		<div class="addressInformationDetails__resultsType">최신 업데이트순 ∨</div>
-		<ul class="addressInformationDetails__list">
-			<li v-for="(item, index) in addressList" :key="index">
-				<div class="addressInformationDetails__badge">
-					<span class="addressInformationDetails__badgeDivision">{{ item.division }}</span>
-					<span class="addressInformationDetails__badge">{{ item.badge }}</span>
-				</div>
-				<div class="addressInformationDetails__like">좋아요</div>
-				<dl class="addressInformationDetails__explanation">
-					<dt>{{ item.title }}</dt>
-					<dd>{{ item.description }}</dd>
-				</dl>
-				<div class="addressInformationDetails__date">
-					업데이트 일자 {{ item.updateDate }}
-				</div>
-				<div class="addressInformationDetails__more">
-					<Button title="">자세히 보기</Button>
-				</div>
-				<div class="addressInformationDetails__download">
-					<Button title="">
-						<span>다운로드</span>
-					</Button>
-				</div>
-			</li>
-		</ul>
-	</div>
+	<SearchResultHeader 
+		:publicAddressCount="50" 
+		:providedAddressCount="30" 
+		resultType="both" 
+		:sortTypes="[
+			{ label: '관련도순', value: 'relevance' },
+			{ label: '최신순', value: 'latest' }
+		]"
+	/>
 
 </template>

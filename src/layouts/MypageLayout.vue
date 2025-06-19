@@ -2,7 +2,7 @@
 	import { ref } from 'vue'
   import DefaultHeader from '@/layouts/DefaultHeader.vue'
   import MypageLnb from '@/layouts/MypageLnb.vue'
-  import Footer from '@components/common/Footer.vue';
+  import DefaultFooter from '@/layouts/DefaultFooter.vue'
 
 	import CommonBreadcrumb from '@components/common/breadcrumb/CommonBreadcrumb.vue';
 </script>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <Footer />
+    <DefaultFooter />
   </div>
 </template>
 <style lang="scss" scoped>

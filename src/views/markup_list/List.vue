@@ -194,7 +194,7 @@
       <td rowspan="4" colspan="1"><div>주소정보 다운로드</div></td>
       <td rowspan="2" colspan="1"><div>목록</div></td>
       <td>큐레이션</td>
-      <td>&nbsp;</td>
+      <td><a href="/data_provision/AddressDownload">AddressDownload</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
