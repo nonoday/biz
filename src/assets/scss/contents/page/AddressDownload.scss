@@ -54,10 +54,11 @@
     }
 
     &__button {
+        position: relative;
         display: block;
         width: 100%;
         height: 126px;
-        padding-top:78px;
+        padding-top:23px;
         border-radius: 12px;
         border:1px solid #C6C6C6;
         color:#1d1d1d;
@@ -66,10 +67,33 @@
         background-position: left 50% top 25px;
         background-repeat: no-repeat;
 
-        // 루프를 사용해서 타입1부터 타입8까지 자동 생성
-        @for $i from 1 through 8 {
-            $type: "0#{$i}";
-            @include button-type($type);
+        img {
+            width: 40px;
+            height: 40px;
+            margin-bottom:10px;
+        }
+
+        &.active {
+            background-color: #325ee6;
+            color:#fff;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap:24px;
+        margin-top:24px;
+        li {
+            width: 384px;
+            
+            .addressCard  {
+                height: 433px;
+            }
         }
     }
 }

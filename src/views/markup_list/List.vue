@@ -200,7 +200,7 @@
     </tr>
     <tr>
       <td>상세 검색</td>
-      <td>&nbsp;</td>
+      <td><a href="/data_provision/AddressDownloadDetails">AddressDownloadDetails</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
