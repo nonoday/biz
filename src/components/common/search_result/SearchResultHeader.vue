@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Button from 'primevue/button'
 
 const props = defineProps({
@@ -32,12 +32,25 @@ const props = defineProps({
     defaultSort: {
         type: String,
         default: 'relevance'
+    },
+    activeIndex: {
+        type: Number,
+        default: 0,
+        validator: (value) => value >= 0 && value <= 2
     }
 })
 
 const emit = defineEmits(['sort'])
 
-const currentSort = ref(props.defaultSort)
+// activeIndex가 설정된 경우 해당 인덱스의 정렬 옵션을 우선적으로 활성화
+const initialSort = computed(() => {
+    if (props.activeIndex >= 0 && props.activeIndex < props.sortTypes.length) {
+        return props.sortTypes[props.activeIndex].value
+    }
+    return props.defaultSort
+})
+
+const currentSort = ref(initialSort.value)
 
 const handleSort = (sortValue) => {
     currentSort.value = sortValue

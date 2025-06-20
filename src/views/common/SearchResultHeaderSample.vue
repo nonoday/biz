@@ -177,6 +177,61 @@ const sortOptions = {
           />
         </div>
       </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">11. 2번째 정렬 옵션 우선 활성화 (최신순)</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="150"
+            :sortTypes="sortOptions.basic"
+            :activeIndex="1"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">12. 3번째 정렬 옵션 우선 활성화 (인기순)</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="150"
+            :sortTypes="sortOptions.basic"
+            :activeIndex="2"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">13. 커스텀 정렬에서 2번째 옵션 우선 활성화 (등록일순)</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="150"
+            :sortTypes="[
+              { label: '이름순', value: 'name' },
+              { label: '등록일순', value: 'date' },
+              { label: '조회수순', value: 'views' }
+            ]"
+            :activeIndex="1"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">14. 2개 항목 정렬에서 2번째 옵션 우선 활성화 (최신순)</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="120"
+            :sortTypes="[
+              { label: '관련도순', value: 'relevance' },
+              { label: '최신순', value: 'latest' }
+            ]"
+            :activeIndex="1"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>

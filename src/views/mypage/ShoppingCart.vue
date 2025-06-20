@@ -186,9 +186,9 @@ const buttonItems = [
 
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/table/datatable';
-	@use '@/assets/scss/contents/list/downloadRequestDetails';
+	@use '@/assets/scss/contents/page/downloadRequestDetails';
 	@use '@/assets/scss/contents/badge/commonBadge';
 	@use '@/assets/scss/contents/input/input_checkbox';
-    @use '@/assets/scss/contents/list/shoppingCart.scss';
+    @use '@/assets/scss/contents/page/shoppingCart.scss';
 	@use '@/assets/scss/contents/box/box';
 </style> 
