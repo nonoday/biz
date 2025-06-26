@@ -30,6 +30,21 @@
             height: 20px;
         }
     }
+    &.xsmall {
+        width:16px;
+        height: 16px;
+
+        &::v-deep(.p-checkbox-box) {
+            width: 16px;
+            height: 16px;
+        }
+
+        & + label {
+            margin-top:-1px;
+            font-size:15px;
+        }
+    }
+
 
     &.p-highlight {
         &::v-deep(.p-checkbox-box) {

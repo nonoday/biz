@@ -19,7 +19,7 @@ const personalTermsConsent = ref('personal2')
 </script>
 
 <template>
-    <p class="term__title"><span class="essential">[필수]</span> 개인정보의 수집 및 이용</p>
+    <p class="term__title"><span class="essential">[필수]</span> 서비스 이용약관 동의</p>
     <div class="term__box">
         <!-- <p class="term__subTitle">[별지 제2호 서식]</p>
         <ul class="term__list">

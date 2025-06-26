@@ -10,6 +10,7 @@
 	import AddressCard from '@/components/common/box/AddressCard.vue'
 	import CustomPaginator from '@/components/common/paginator/CustomPaginator.vue'
 	import BasicCalendar from '@/components/common/calendar/BasicCalendar.vue'
+	// import MonthCalendar from '@/components/common/calendar/MonthCalendar.vue'
 
     
 
@@ -193,10 +194,10 @@
 			<div class="addressInformationDetails__header">날짜 선택</div>
 			<div class="addressInformationDetails__calendar">
 				<BasicCalendar />
+				<!-- <MonthCalendar /> -->
 			</div>
 		</div>
 	</div>
-
 
 	<SearchResultHeader 
 		:publicAddressCount="50" 

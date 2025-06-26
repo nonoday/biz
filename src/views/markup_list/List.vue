@@ -26,6 +26,15 @@
     </tr>
   </thead>
   <tbody>
+    <tr class="highlight">
+      <td>메인</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>디자인</td>
+    </tr>
     <tr>
       <td rowspan="14" colspan="1"><div>주소정보 정책소개</div></td>
       <td rowspan="10" colspan="1"><div>주소활용정책 소개</div></td>
@@ -190,8 +199,8 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="14" colspan="1"><div>주소정보 자료제공</div></td>
-      <td rowspan="4" colspan="1"><div>주소정보 다운로드</div></td>
+      <td rowspan="21" colspan="1"><div>주소정보 자료제공</div></td>
+      <td rowspan="7" colspan="1"><div>주소정보 다운로드</div></td>
       <td rowspan="2" colspan="1"><div>목록</div></td>
       <td>큐레이션</td>
       <td><a href="/data_provision/AddressDownload">AddressDownload</a></td>
@@ -219,17 +228,38 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="4" colspan="1"><div>주소정보 데이터 연계</div></td>
-      <td>도로명주소 데이터 연계 절차</td>
-      <td></td>
-      <td></td>
+      <td>제공하는 주소</td>
+      <td>주소정보 다운로드</td>
+      <td><a href="/data_provision/AddressProvided">AddressProvided</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td><div>
+      <td></td>
+      <td>데이터 구성</td>
+      <td>탭</td>
+      <td></td>
+      <td>주소정보 다운로드 페이지에 탭</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>스키마 구성</td>
+      <td>탭</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td rowspan="4" colspan="1"><div>주소정보 데이터 연계</div></td>
+      <td>도로명주소 데이터 연계 절차</td>
+      <td></td>
+      <td><a href="/data_provision/AddressLinkage">AddressLinkage</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
         <div>도로명주소 데이터 연계 활용 예제</div>
-      </div></td>
+      </td>
       <td></td>
       <td></td>
       <td></td>
@@ -238,59 +268,86 @@
     <tr>
       <td rowspan="2" colspan="1"><div>연계 신청</div></td>
       <td>약관동의</td>
-      <td>&nbsp;</td>
+      <td><a href="/data_provision/LinkageTerms">LinkageTerms</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>신청서 작성</td>
-      <td>&nbsp;</td>
+      <td><a href="/data_provision/ApplicationWrite">ApplicationWrite</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td rowspan="3" colspan="1"><div>주소정보 API 연계</div></td>
-      <td>API 목록</td>
-      <td></td>
-      <td></td>
+      <td rowspan="8" colspan="1"><div>주소정보 API 연계</div></td>
+      <td>API </td>
+      <td>목록</td>
+      <td><a href="/data_provision/AddressApiList">AddressApiList</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
-      <td>API 상세</td>
+      <td> </td>
+      <td>상세 도로명주소 팝업 API 클릭 시</td>
+      <td><a href="/data_provision/AddressApiRoadNameiPc">AddressApiRoadNameiPc</a></td>
       <td></td>
       <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>상세 도로명주소 모바일 팝업 API 클릭 시</td>
+      <td><a href="/data_provision/AddressApiRoadNameiMo">AddressApiRoadNameiMo</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>상세 상세주소 팝업 API 클릭 시</td>
+      <td><a href="/data_provision/AddressApiDetailePopdAddress">AddressApiDetailePopdAddress</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>상세 상세주소 API 소스 클릭 시</td>
+      <td><a href="/data_provision/AddressApiDetailedAddress">AddressApiDetailedAddress</a></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>상세 지도제공 검색 API 클릭 시</td>
+      <td><a href="/data_provision/AddressApiMapdAddress">AddressApiMapdAddress</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>API 신청하기</td>
       <td></td>
-      <td></td>
+      <td><a href="/data_provision/AddressApiApplication">AddressApiApplication</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td rowspan="3" colspan="1"><div>주소정보 솔루션 제공</div></td>
       <td>주소검색솔루션 소개</td>
-      <td></td>
+      <td><a href="/data_provision/Solution">Solution</a></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>주소검색솔루션 다운로드</td>
-      <td></td>
+      <td>-</td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>주소검색솔루션 팝업서비스</td>
+      <td>-</td>
       <td></td>
       <td></td>
-      <td></td>
-
       <td></td>
     </tr>
     <tr>
@@ -370,29 +427,29 @@
       <td></td>
       <td></td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td rowspan="4" colspan="1"><div>행정구역 코드 변경안내</div></td>
       <td>전북특별자치도</td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>디자인 나와야함</td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>부천시</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>강원특별자치도</td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>군위군</td>
       <td></td>
       <td></td>
@@ -404,17 +461,17 @@
       <td></td>
       <td>휴대폰 인증</td>
       <td></td>
-      <td></td>
+      <td><a href="/layer">layer</a></td>
       <td></td>
       <td></td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td></td>
       <td>소셜 인증</td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>레이어팝업 휴대폰인증과 동일</td>
     </tr>
     <tr>
       <td rowspan="14" colspan="1"><div>마이페이지</div></td>
@@ -540,7 +597,12 @@
   tbody {
     td {
       padding:5px;
-      border:1px solid #808080;
+      border:1px solid #808080;      
+    }
+    tr.highlight {
+      td {
+        background-color: #fdecec;
+      }
     }
   }
 }

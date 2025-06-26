@@ -11,6 +11,21 @@
             color:#CD0603;
         }
     }
+    &__header {
+        margin-top:40px;
+
+        .p-checkbox +  label {
+            margin-left:16px;
+            font-size:19px;
+            font-weight: 700;
+        }
+    }
+
+    &__text {
+        margin:5px 0 0 40px;
+        color: #555555;
+        font-size:19px;
+    }
     &__subTitle {
         margin-top:16px;
         font-size:17px;

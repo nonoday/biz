@@ -39,7 +39,6 @@ const personalTermsConsent = ref('personal2')
             </li>
         </ul>
 
-
         <p class="term__subTitle">제3조(개인정보의 처리 및 보유기간) "도로명주소 누리집"에서 처리하는 개인정보는 수집·이용 목적으로 명시한 범위 내에서 처리하며, 개인정보보호법 및 관련 법령에서 정하는 보유기간을 준용하여 이행하고 있습니다.</p>
         <ul class="term__list">
             <li>

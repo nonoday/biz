@@ -66,11 +66,11 @@ const props = defineProps({
     display: flex;
     margin-top:40px;
 
-    &__left {
+    &.left {
         justify-content: flex-start;
     }
 
-    &__right {
+    &.right {
         justify-content: flex-end;
     }
 
@@ -78,7 +78,7 @@ const props = defineProps({
         justify-content: space-between;
     }
 
-    &__center {
+    &.center {
         justify-content: center;
     }
 

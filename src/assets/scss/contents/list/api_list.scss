@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.addressApiListTab {
+    display: flex;
+    width: 100%;
+    gap:12px;
+    margin-top:48px;
+
+    li {
+        flex:1;
+
+        &:hover {
+            border-color: #007bff;
+            background-color: #f8f9fa;
+        }
+
+        &.active {
+        }
+    }
+
+        &__button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 126px;
+            border:1px solid #C6C6C6;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0.2) contrast(1);
+                transition: filter 0.3s ease;
+            }
+
+            &:hover img {
+                filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(199deg) brightness(104%) contrast(97%);
+            }
+        }
+
+        li.active &__button img {
+            filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(199deg) brightness(104%) contrast(97%);
+        }
+        li.active &__button  {
+            border-color: #007bff;
+            background-color: #e3f2fd;
+        }
+
+        &__text {
+            margin-top:12px;
+            color:#1d1d1d;
+            font-size:15px;
+            transition: color 0.3s ease;
+        }
+
+        li:hover &__text {
+            color: #007bff;
+        }
+
+        li.active &__text {
+            color: #007bff;
+            font-weight: 600;
+        }
+}

@@ -36,6 +36,26 @@ const router = createRouter({
         depth2: '샘플'
       },
     },
+    {
+      path: "/layer",
+      name: '/layer',
+      component: () => import('@/views/common/Layer.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템',
+        depth2: '샘플'
+      },
+    },
+    {
+      path: "/calendar",
+      name: '/calendar',
+      component: () => import('@/views/common/CalendarSample.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '도로명주소 안내시스템',
+        depth2: '샘플'
+      },
+    },
     
     {
       path: "/board",
@@ -120,27 +140,64 @@ const router = createRouter({
       },
     },
     {
-      path: "/data_provision/DataOrganization",
-      name: '/data_provision/DataOrganization',
-      component: () => import('@/views/data_provision/DataOrganization.vue'),
+      path: "/data_provision/AddressProvided",
+      name: '/data_provision/AddressProvided',
+      component: () => import('@/views/data_provision/AddressProvided.vue'),
       meta: { 
         layout: 'DefaultLayout',
-        title: '데이터 구성',
+        title: '주소정보 다운로드',
         depth3: '주소정보 다운로드',
         depth2: '주소정보 자료제공'
       },
     },
     {
-      path: "/data_provision/SchemaComposition",
-      name: '/data_provision/SchemaComposition',
-      component: () => import('@/views/data_provision/SchemaComposition.vue'),
+      path: "/data_provision/AddressLinkage",
+      name: '/data_provision/AddressLinkage',
+      component: () => import('@/views/data_provision/AddressLinkage.vue'),
       meta: { 
         layout: 'DefaultLayout',
-        title: '스키마 구성',
-        depth3: '주소정보 다운로드',
+        title: '주소정보 데이터 연계',
+        depth3: '주소정보 데이터 연계',
         depth2: '주소정보 자료제공'
       },
     },
+    {
+      path: "/data_provision/LinkageTerms",
+      name: '/data_provision/LinkageTerms',
+      component: () => import('@/views/data_provision/LinkageTerms.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '약관동의',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/ApplicationWrite",
+      name: '/data_provision/ApplicationWrite',
+      component: () => import('@/views/data_provision/ApplicationWrite.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '신청서 작성',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/AddressApiList",
+      name: '/data_provision/AddressApiList',
+      component: () => import('@/views/data_provision/AddressApiList.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '목록',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+
+
+
+    
 
     // 주소정보 소통창구 Address information communication window
     {

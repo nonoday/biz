@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import PrimeVue from 'primevue/config';
+import VCalendar from 'v-calendar';
 
 import App from './App.vue'
 import router from './router'
@@ -48,6 +49,9 @@ export function createVueApp() {
     app.use(createPinia());
     app.use(router);
     app.use(PrimeVue, {
+        locale: locale_ko,
+    });
+    app.use(VCalendar, {
         locale: locale_ko,
     });
     app.directive('caption', {});
