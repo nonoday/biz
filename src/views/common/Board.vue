@@ -67,7 +67,7 @@
         ]"
         :rightButtons="[
             { text: '수정', onClick: handleEdit, class: 'primary' },
-            { text: '삭제', onClick: handleDelete, class: 'danger' }
+            { text: '삭제', onClick: handleDelete, class: 'tertiary' }
         ]"
     />
 
@@ -84,7 +84,7 @@
         type="right"
         :rightButtons="[
             { text: '수정', onClick: handleEdit, class: 'primary' },
-            { text: '삭제', onClick: handleDelete, class: 'danger' }
+            { text: '삭제', onClick: handleDelete, class: 'tertiary' }
         ]"
     />
 

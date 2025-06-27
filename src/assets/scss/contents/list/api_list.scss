@@ -18,47 +18,148 @@
         }
     }
 
-        &__button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            height: 126px;
-            border:1px solid #C6C6C6;
-            border-radius: 12px;
-            transition: all 0.3s ease;
+    &__button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 126px;
+        border:1px solid #C6C6C6;
+        border-radius: 12px;
+        transition: all 0.3s ease;
 
-            img {
-                filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0.2) contrast(1);
-                transition: filter 0.3s ease;
-            }
-
-            &:hover img {
-                filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(199deg) brightness(104%) contrast(97%);
-            }
+        img {
+            filter: brightness(0) saturate(100%) invert(20%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0.2) contrast(1);
+            transition: filter 0.3s ease;
         }
 
-        li.active &__button img {
+        &:hover img {
             filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(199deg) brightness(104%) contrast(97%);
         }
-        li.active &__button  {
-            border-color: #007bff;
-            background-color: #e3f2fd;
-        }
+    }
 
-        &__text {
-            margin-top:12px;
-            color:#1d1d1d;
-            font-size:15px;
-            transition: color 0.3s ease;
-        }
+    li.active &__button img {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(199deg) brightness(104%) contrast(97%);
+    }
+    li.active &__button  {
+        border-color: #007bff;
+        background-color: #e3f2fd;
+    }
 
-        li:hover &__text {
-            color: #007bff;
-        }
+    &__text {
+        margin-top:12px;
+        color:#1d1d1d;
+        font-size:15px;
+        font-weight: 700;
+        transition: color 0.3s ease;
+    }
 
-        li.active &__text {
-            color: #007bff;
-            font-weight: 600;
+    li:hover &__text {
+        color: #007bff;
+    }
+
+    li.active &__text {
+        color: #007bff;
+        font-weight: 600;
+    }
+}
+.addressApiListTotal {
+    margin-top:40px;
+    color:#1E2124;
+    font-size:19px;
+    font-weight: 700;
+
+    &__count {
+        display: inline-block;
+        margin-left:5px;
+    }
+}
+.addressApiList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:24px;
+    gap:24px;
+
+    li {
+        width:384px;
+        height: 331px;
+    }
+    &__box {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border:1px solid #C6C6C6;
+        border-radius: 12px;
+    }
+    &__header {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        height: 108px;
+        padding:32px 0 0 32px;
+        background-color: #F8F8F8;
+        font-size:15px;
+        font-weight: 700;
+
+        &.type01 {
+            color: #267337;
         }
+        &.type02 {
+            color: #0B50D0;
+        }
+        &.type03 {
+            color: #FFAA00;
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right:32px;
+        bottom:16px;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
+    &__content {
+        padding:32px;
+    }
+    &__contentTitle {
+        color: #1E2124;
+        font-size:19px;
+        font-weight: 700;
+    }
+    &__contentText {
+        color: #1E2124;
+        font-size: 17px;
+    }
+    &__type {
+        display: flex;
+        margin-top:16px;
+        gap:8px;
+    }
+    &__function {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:32px;
+    }
+    &__apply {
+        display: inline-block;
+        padding-right:24px;
+        background: url('@images/common/button/btn_move.svg') no-repeat right 50%; 
+        color: #1D1D1D;
+        font-size:17px;
+    }
+    &__viewDetails {
+        display: inline-block;
+        padding-right:24px;
+        background: url('@images/common/button/btn_edit.svg') no-repeat right 50%; 
+        color: #1D1D1D;
+        font-size:17px;
+    }
+
 }

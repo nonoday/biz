@@ -273,6 +273,4 @@
 	@use '@/assets/scss/contents/input/input_checkbox';
 	@use '@/assets/scss/contents/box/box';
 	@use '@/assets/scss/contents/list/source';
-
-
 </style> 

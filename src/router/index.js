@@ -194,7 +194,61 @@ const router = createRouter({
         depth2: '주소정보 자료제공'
       },
     },
-
+    {
+      path: "/data_provision/AddressApiRoadNameiPc",
+      name: '/data_provision/AddressApiRoadNameiPc',
+      component: () => import('@/views/data_provision/AddressApiRoadNameiPc.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '상세 도로명주소',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/AddressApiRoadNameiMo",
+      name: '/data_provision/AddressApiRoadNameiMo',
+      component: () => import('@/views/data_provision/AddressApiRoadNameiMo.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '상세 도로명주소',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/AddressApiDetailePopdAddress",
+      name: '/data_provision/AddressApiDetailePopdAddress',
+      component: () => import('@/views/data_provision/AddressApiDetailePopdAddress.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '팝업 API',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/AddressApiDetailedAddress",
+      name: '/data_provision/AddressApiDetailedAddress',
+      component: () => import('@/views/data_provision/AddressApiDetailedAddress.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '팝업 API',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
+    {
+      path: "/data_provision/AddressApiMapdAddress",
+      name: '/data_provision/AddressApiMapdAddress',
+      component: () => import('@/views/data_provision/AddressApiMapdAddress.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '팝업 API',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },
 
 
     

@@ -92,6 +92,8 @@
         color:#CC0502;
     }
 
+
+
     &__explanation {
         display: flex;
         flex-wrap: wrap;
@@ -113,6 +115,11 @@
         dd {
             width: calc(100% - 192px);
             font-size:17px;
+
+            &.badgeBox {
+                display: inline-flex;
+                gap:12px;
+            }
         }
     }
 
@@ -184,5 +191,9 @@
         background: url('@images/common/button/btn_download.svg') no-repeat right 50%; 
         color: #1D1D1D;
         font-size:17px;
+    }
+    &__image {
+        margin-top:24px;
+        font-size:0;
     }
 }

@@ -5,6 +5,13 @@
     justify-content: space-between;
     margin-top:40px;
 
+
+    + .detailBottom  {
+        margin-top: 40px;
+        padding-top:40px;
+        border-top:1px solid #C6C6C6;
+    }
+
     &__description {
         width: 580px;
     }
@@ -36,6 +43,20 @@
             font-size:17px;
             word-break: keep-all;
 
+            &:first-child {
+                margin-top:0;
+            }
+        }
+    }
+    &__list02 {
+        margin-top:20px;
+        li {
+            margin-top:12px;
+            padding-left:20px;
+            text-indent: -20px;
+            color: #1d1d1d;
+            font-size:17px;
+            
             &:first-child {
                 margin-top:0;
             }
@@ -73,5 +94,39 @@
     &__viewSample {
         position: sticky;
         top:174px;
+    }
+
+    &__table {
+        table-layout: fixed;
+        width: 100%;
+        margin-top:20px;
+        border-top:1px solid #1D1D1D;
+
+        thead {
+            th {
+                height: 47px;
+                border-bottom:1px solid #C6C6C6;
+                background: #F8F8F8;
+                color: #1d1d1d;
+                text-align: center;
+                font-size:15px;
+                font-weight: 700;
+            }
+        }
+        tbody {
+            td {
+                padding:12px 0 12px;
+                border-bottom:1px solid #C6C6C6;
+                color: #555;
+                text-align: center;
+                font-size:17px;
+                word-break: break-all;
+
+                &.alignLeft {
+                    padding-left:10px;
+                    text-align: left;
+                }
+            }
+        }
     }
 }
