@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<table class="markuplist">
+<table class="markuplist">
   <colgroup>
   <col width="131"/>
   <col width="240"/>
@@ -20,9 +20,9 @@
       <th>2depth</th>
       <th>3depth</th>
       <th>4depth</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>경로</th>
+      <th>완료</th>
+      <th>비고</th>
     </tr>
   </thead>
   <tbody>
@@ -40,88 +40,88 @@
       <td rowspan="10" colspan="1"><div>주소활용정책 소개</div></td>
       <td>목록</td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td><a href="/policy_introduction/PolicyIntroduction">PolicyIntroduction</a></td>
+      <td>2</td>
       <td></td>
     </tr>
     <tr>
       <td rowspan="3" colspan="1"><div>사물주소</div></td>
       <td>사물주소 소개</td>
-      <td>1</td>
+      <td><a href="/policy_introduction/AddressThing">AddressThing</a></td>
       <td>1</td>
       <td>1</td>
     </tr>
     <tr>
       <td>사물주소 유형</td>
-      <td>&nbsp;</td>
+      <td>탭</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>사물주소 사용 예시</td>
-      <td>&nbsp;</td>
+      <td>탭</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td rowspan="3" colspan="1"><div>입체주소</div></td>
       <td>입체도로 소개</td>
-      <td>&nbsp;</td>
+      <td><a href="/policy_introduction/3DAddress">3DAddress</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>입체주소 부여방법</td>
-      <td>&nbsp;</td>
+      <td>탭</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>입체도로 도로명판의 종류</td>
-      <td>&nbsp;</td>
+      <td>탭</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td rowspan="2" colspan="1"><div>장소지능정보</div></td>
       <td>장소지능 출입구 정보 소개</td>
-      <td>&nbsp;</td>
+      <td><a href="/policy_introduction/Location">location</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>출입구 정보 구축 예시</td>
-      <td>&nbsp;</td>
+      <td>탭</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>수상시설</td>
       <td></td>
+      <td><a href="/policy_introduction/Premier">Premier</a></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td>Premier</td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td rowspan="2" colspan="1"><div>주소정보 유통 프로세스 소개</div></td>
       <td>유통정보의 생애 주기와 절차</td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>사업단 내용 확인</td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>주소정보 DB 구축</td>
+      <td>탭</td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
+      <td>사업단 내용 확인</td>
     </tr>
     <tr>
       <td rowspan="2" colspan="1"><div>주소정보통계</div></td>
       <td>주요 통계</td>
       <td></td>
-      <td></td>
+      <td><a href="/policy_introduction/Statistics">Statistics</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -133,38 +133,45 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="9" colspan="1"><div>주소정보 체험하기</div></td>
+      <td rowspan="10" colspan="1"><div>주소정보 체험하기</div></td>
       <td rowspan="3" colspan="1"><div>사용자 추천 서비스</div></td>
       <td rowspan="3" colspan="1"><div>사용자 추천</div></td>
       <td>사용목적 선택</td>
-      <td>&nbsp;</td>
+      <td><a href="/experience/IntendedUse">IntendedUse</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>세부 설정 선택</td>
-      <td>&nbsp;</td>
+      <td><a href="/experience/IntendedUseDetailedSettings">IntendedUseDetailedSettings</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>결과</td>
-      <td>&nbsp;</td>
+      <td><a href="/experience/IntendedUseResult">IntendedUseResult</a></td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td rowspan="2" colspan="1"><div>도로명 주소 속성정보 체험하기</div></td>
+      <td rowspan="3" colspan="1"><div>도로명 주소 속성정보 체험하기</div></td>
       <td>소개</td>
       <td></td>
-      <td></td>
+      <td><a href="/experience/Attribute">Attribute</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>속성정보 체험하기</td>
+      <td>기본</td>
+      <td><a href="/experience/AttributeBasic">AttributeBasic</a></td>
       <td></td>
       <td></td>
+    </tr>
+    <tr>
+      <td>속성정보 체험하기</td>
+      <td>확장</td>
+      <td><a href="/experience/AttributeExpansion">AttributeExpansion</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -172,14 +179,14 @@
       <td rowspan="2" colspan="1"><div>도로명 주소 공간정보 체험하기</div></td>
       <td>소개</td>
       <td></td>
-      <td></td>
+      <td><a href="/experience/Space">Space</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>체험하기</td>
       <td></td>
-      <td></td>
+      <td><a href="/experience/Experience">Experience</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -187,14 +194,14 @@
       <td rowspan="2" colspan="1"><div>신규 주소정책 체험하기</div></td>
       <td>소개</td>
       <td></td>
-      <td></td>
+      <td><a href="/experience/NewExperience">NewExperience</a></td>
       <td></td>
       <td></td>
     </tr>
     <tr>
       <td>체험하기</td>
       <td></td>
-      <td></td>
+      <td><a href="/experience/NewExperienceBasic">NewExperienceBasic</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -204,34 +211,34 @@
       <td rowspan="2" colspan="1"><div>목록</div></td>
       <td>큐레이션</td>
       <td><a href="/data_provision/AddressDownload">AddressDownload</a></td>
-      <td>&nbsp;</td>
+      <td>&nbsp;완료</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>상세 검색</td>
       <td><a href="/data_provision/AddressDownloadDetails">AddressDownloadDetails</a></td>
-      <td>&nbsp;</td>
+      <td>&nbsp;완료</td>
       <td>&nbsp;</td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>상세</td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>마이페이지로 합쳐짐</td>
     </tr>
-    <tr>
+    <tr class="highlight">
       <td>신청서 작성</td>
       <td></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>마이페이지로 합쳐짐</td>
     </tr>
     <tr>
       <td>제공하는 주소</td>
       <td>주소정보 다운로드</td>
       <td><a href="/data_provision/AddressProvided">AddressProvided</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -253,7 +260,7 @@
       <td>도로명주소 데이터 연계 절차</td>
       <td></td>
       <td><a href="/data_provision/AddressLinkage">AddressLinkage</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -356,19 +363,19 @@
       <td rowspan="3" colspan="1"><div>Tech&amp;Tips</div></td>
       <td>목록</td>
       <td><a href="/communication/TechTipsList">TechTipsList</a></td>
-      <td>&nbsp;</td>
+      <td>&nbsp;완료</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>상세</td>
       <td><a href="/communication/TechTipsDetails">TechTipsDetails</a></td>
-      <td>&nbsp;</td>
+      <td>&nbsp;완료</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
       <td>작성</td>
       <td><a href="/communication/TechTipsWrite">TechTipsWrite</a></td>
-      <td>&nbsp;</td>
+      <td>&nbsp;완료</td>
       <td>&nbsp;</td>
     </tr>
     <tr>
@@ -395,21 +402,21 @@
       <td>목록</td>
       <td></td>
       <td><a href="/communication/InquiryList">InquiryList</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
       <td><a href="/communication/InquiryDetails">InquiryDetails</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>작성</td>
       <td></td>
       <td><a href="/communication/InquiryWrite">InquiryWrite</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -417,14 +424,14 @@
       <td>목록</td>
       <td></td>
       <td><a href="/communication/NoticeList">NoticeList</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
       <td><a href="/communication/NoticeDetails">NoticeDetails</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr class="highlight">
@@ -432,7 +439,7 @@
       <td>전북특별자치도</td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>&nbsp;</td>
       <td>디자인 나와야함</td>
     </tr>
     <tr class="highlight">
@@ -462,7 +469,7 @@
       <td>휴대폰 인증</td>
       <td></td>
       <td><a href="/layer">layer</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr class="highlight">
@@ -479,14 +486,14 @@
       <td>장바구니</td>
       <td></td>
       <td><a href="/mypage/ShoppingCart">ShoppingCart</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>신청서 작성</td>
       <td></td>
       <td><a href="/mypage/ApplicationFormWrite">ApplicationFormWrite</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -494,7 +501,7 @@
       <td></td>
       <td></td>
       <td><a href="/mypage/Favorites">Favorites</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -502,7 +509,7 @@
       <td></td>
       <td></td>
       <td><a href="/mypage/ApplicationHistory">ApplicationHistory</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -510,21 +517,21 @@
       <td>목록</td>
       <td></td>
       <td><a href="/mypage/ConnectionsList">ConnectionsList</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
       <td><a href="/mypage/ConnectionsDetails">ConnectionsDetails</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
       <td></td>
       <td><a href="/mypage/ConnectionsModify">ConnectionsModify</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -532,21 +539,21 @@
       <td>목록</td>
       <td></td>
       <td><a href="/mypage/ApiList">ApiList</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td>Details</td>
       <td><a href="/mypage/ApiDetails">ApiDetails</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
       <td>Modify</td>
       <td><a href="/mypage/ApiModify">ApiModify</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
@@ -554,33 +561,32 @@
       <td>목록</td>
       <td></td>
       <td><a href="/mypage/InquiryList">InquiryList</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td></td>
       <td><a href="/mypage/InquiryDetails">InquiryDetails</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>상세</td>
       <td>대기</td>
       <td><a href="/mypage/InquiryDetailsWaiting">InquiryDetailsWaiting</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
     <tr>
       <td>수정</td>
       <td></td>
       <td><a href="/mypage/InquiryModify">InquiryModify</a></td>
-      <td></td>
+      <td>완료</td>
       <td></td>
     </tr>
   </tbody>
 </table>
-
 
 </template>
 

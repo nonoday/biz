@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@ibsheet/loader": "^1.1.21",
+    "@popperjs/core": "^2.11.8",
     "@vue/server-renderer": "^3.5.13",
     "aos": "^2.3.4",
     "chart.js": "^4.4.2",
