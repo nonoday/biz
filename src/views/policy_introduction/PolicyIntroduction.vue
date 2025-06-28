@@ -1,9 +1,8 @@
 <script setup>
 	import { ref, onMounted, computed } from 'vue'
 
-    // import ShareFunction from '@components/button/ShareFunction.vue';
-    // import PrintFunction from '@components/button/PrintFunction.vue';
-
+    import Button from 'primevue/button'
+	import HeaderTitle from '@/components/common/title/HeaderTitle.vue'
 
 	const policyList = ref([
 		{
@@ -42,25 +41,27 @@
 </script>
 
 <template>
-	<div class="contentHeader">
-		<h2>주소정보 활용정책 소개</h2>
-		<div>
-			<!-- <ShareFunction />
-			<PrintFunction /> -->
-		</div>
-	</div>
+	<HeaderTitle title="주소정보 활용정책 소개" />
 	
 	<ul class="policyIntroduction__list">
 		<li v-for="(item, index) in policyList" :key="index">
-			<dl class="policyIntroduction__explanation">
-				<dt>{{ item.title }}</dt>
-				<dd>{{ item.description }}</dd>
-			</dl>
-			<div class="policyIntroduction__tagList">
-				<span v-for="(tag, tagIndex) in item.tags" :key="tagIndex" class="policyIntroduction__tag">#{{ tag }}</span>
-			</div>
-			<div class="policyIntroduction__text" v-html="item.text.replace('\n', '<br />')"></div>
-			<a :href="item.href" class="policyIntroduction__link" :title="item.linkTitle">자세히 보기</a>
+			<a :href="item.href" class="policyIntroduction__link" :class="`type0${index + 1}`" :title="item.linkTitle">
+				<dl class="policyIntroduction__explanation">
+					<dt>{{ item.title }}</dt>
+					<dd>{{ item.description }}</dd>
+				</dl>
+				<div class="policyIntroduction__tagList">
+					<span v-for="(tag, tagIndex) in item.tags" :key="tagIndex" class="policyIntroduction__tag">#{{ tag }}</span>
+				</div>
+				<div class="policyIntroduction__text" v-html="item.text.replace('\n', '<br />')"></div>
+				<span aria-hidden="true" class="policyIntroduction__hidddenText">자세히 보기</span>
+			</a>
 		</li>
 	</ul>
 </template>
+
+
+<style lang="scss" scoped>
+	@use '@/assets/scss/contents/list/policyIntroduction__list';
+	@use '@/assets/scss/contents/badge/commonBadge';
+</style>

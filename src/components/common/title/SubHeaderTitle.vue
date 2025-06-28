@@ -31,6 +31,7 @@
   margin-top:48px;
 	font-weight: 700;
 	line-height: 150%;		
+  color:#1d1d1d;
   font-size:32px;
   letter-spacing: 1px;
 }

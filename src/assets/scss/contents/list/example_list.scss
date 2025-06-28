@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+	.example {
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 24px;
+			margin-top:24px;
+			li {
+				width: 180px;
+				height: 162px;
+				font-size:0;
+			}
+		}
+	}

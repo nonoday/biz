@@ -112,10 +112,173 @@ const router = createRouter({
         firstpage: true
       },
     },
+    {
+      path: "/policy_introduction/AddressThing",
+      name: '/policy_introduction/AddressThing',
+      component: () => import('@/views/policy_introduction/AddressThing.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '사물주소 소개',
+        depth3: '사물주소',
+        depth2: '주소정보 정책소개'
+      },
+    },
+    {
+      path: "/policy_introduction/3DAddress",
+      name: '/policy_introduction/3DAddress',
+      component: () => import('@/views/policy_introduction/3DAddress.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '입체도로 소개',
+        depth3: '입체주소',
+        depth2: '주소정보 정책소개'
+      },
+    },
+    {
+      path: "/policy_introduction/location",
+      name: '/policy_introduction/location',
+      component: () => import('@/views/policy_introduction/location.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '장소지능 출입구 정보 소개',
+        depth3: '장소지능정보',
+        depth2: '주소정보 정책소개'
+      },
+    },
+    {
+      path: "/policy_introduction/Premier",
+      name: '/policy_introduction/Premier',
+      component: () => import('@/views/policy_introduction/Premier.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '수상시설',
+        depth2: '주소정보 정책소개'
+      },
+    },
+    {
+      path: "/policy_introduction/Statistics",
+      name: '/policy_introduction/Statistics',
+      component: () => import('@/views/policy_introduction/Statistics.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '주요 통계',
+        depth3: '주소정보통계',
+        depth2: '주소정보 정책소개'
+      },
+    },
     
     
     //주소정보 체험하기 Experience Address Information
-
+    {
+      path: "/experience/IntendedUse",
+      name: '/experience/IntendedUse',
+      component: () => import('@/views/experience/IntendedUse.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '사용목적 선택',
+        depth3: '사용자 추천',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/IntendedUseDetailedSettings",
+      name: '/experience/IntendedUseDetailedSettings',
+      component: () => import('@/views/experience/IntendedUseDetailedSettings.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '세부 설정 선택',
+        depth3: '사용자 추천',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/IntendedUseResult",
+      name: '/experience/IntendedUseResult',
+      component: () => import('@/views/experience/IntendedUseResult.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '결과',
+        depth3: '사용자 추천',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/Attribute",
+      name: '/experience/Attribute',
+      component: () => import('@/views/experience/Attribute.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '소개',
+        depth3: '도로명 주소 속성정보 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/AttributeBasic",
+      name: '/experience/AttributeBasic',
+      component: () => import('@/views/experience/AttributeBasic.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '기본',
+        depth3: '도로명 주소 속성정보 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/AttributeExpansion",
+      name: '/experience/AttributeExpansion',
+      component: () => import('@/views/experience/AttributeExpansion.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '확장',
+        depth3: '도로명 주소 속성정보 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/Space",
+      name: '/experience/Space',
+      component: () => import('@/views/experience/Space.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '소개',
+        depth3: '도로명 주소 공간정보 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/Experience",
+      name: '/experience/Experience',
+      component: () => import('@/views/experience/Experience.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '체험하기',
+        depth3: '도로명 주소 공간정보 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/NewExperience",
+      name: '/experience/NewExperience',
+      component: () => import('@/views/experience/NewExperience.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '소개',
+        depth3: '신규 주소정책 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
+    {
+      path: "/experience/NewExperienceBasic",
+      name: '/experience/NewExperienceBasic',
+      component: () => import('@/views/experience/NewExperienceBasic.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '체험하기',
+        depth3: '신규 주소정책 체험하기',
+        depth2: '주소정보 체험하기'
+      },
+    },
 
     //주소정보 자료제공 Address information data provision
     {
