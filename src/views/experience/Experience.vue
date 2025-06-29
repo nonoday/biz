@@ -3,10 +3,21 @@
 	import TabView from 'primevue/tabview'
 	import TabPanel from 'primevue/tabpanel'
 	import Button from 'primevue/button'
+	import Dialog from 'primevue/dialog'
 	import CommonTab from '@/components/common/tab/CommonTab.vue'
 
 	const activeIndex = ref(0)
 	const activeLnbItem = ref(null) 
+	const showModal = ref(false)
+
+	// 모달 열기/닫기 함수
+	const openModal = () => {
+		showModal.value = true
+	}
+
+	const closeModal = () => {
+		showModal.value = false
+	}
 
 	// LNB 아이템 토글 함수
 	const toggleLnbItem = (index) => {
@@ -125,23 +136,59 @@
 				</li>
 			</ul>
 		</div>
-		<div v-if="activeIndex === 0" class="attribute-content">
+		<div v-if="activeIndex === 0">
+			<button @click="openModal">레이어팝업</button>
 			
-			<div class="experience__contentBox">
+			<!-- <p class="experience__resultNot">
+				검색 결과가 없습니다.<br />속성정보를 선택해 데이터를 확인해보세요.
+			</p> -->
+			
+			<div class="experience__contentBox" style="display:none;">
+				<!-- 탭안에 내용은 채워주세요. -->
 				<CommonTab :tabs="tabConfig" />
 			</div>
+
+
+		<!-- 커스텀 헤더 모달 팝업 -->
+			<Dialog 
+				v-model:visible="showModal" 
+				:modal="true"
+				:closable="true"
+				:closeOnEscape="true"
+				class="customModal"
+				:style="{ width: '404px', maxWidth: '404px' }"
+			>
+				
+				<div class="customModal__box">
+					<p class="customModal__contentTitle">건물</p>
+					<ul class="customModal__contentList">
+						<li><span class="title">시군구코드</span>: 11140</li>
+						<li><span class="title">건물명</span>: 에스엘용산</li>
+						<li><span class="title">도로구간번호</span>: 1508</li>
+						<li><span class="title">건물용코드</span> : 14201(금융업소)</li>
+					</ul>
+				</div>
+			</Dialog>
+
 		</div>
 		
-		<div v-if="activeIndex === 1" class="space-content">
+
+		
+		<div v-if="activeIndex === 1">
 			<h3>공간정보 체험하기</h3>
 		</div>
 		
-		<div v-if="activeIndex === 2" class="new-policy-content">
+		<div v-if="activeIndex === 2">
 			<h3>신규주소정책 체험하기</h3>
 		</div>
 	</div>
 </template>
-
+<style lang="scss">
+	.customModal {padding:24px !important;background-color: #fff;}
+	.customModal .p-dialog-header {
+		justify-content: flex-end !important;
+	}
+</style>
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/layout/experience';
 </style>

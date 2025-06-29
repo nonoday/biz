@@ -144,4 +144,57 @@ body {
             right: 0;
         }
     }
+    &__resultNot {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top:232px;
+        left:50%;
+        transform: translateX(-50%);
+        background: url('@images/experience/img_basic.png') no-repeat 50% 0;
+        padding-top:240px;
+        color: #8E8E8E;
+        font-size:19px;
+        text-align: center;
+
+    }
+}
+
+
+.customModal {
+    &__box {
+        padding:8px 16px;
+    }
+    &__contentTitle {
+        color:#1D1D1D;
+        font-size:24px;
+        font-weight: 700;
+    }
+    &__contentList {
+        margin-top:16px;
+        li {
+            display: flex;
+            align-items: center;
+
+            height: 50px;
+            margin-top:8px;
+            background-color: #F4F5F6;
+            border-radius: 12px;
+            padding:0 16px;
+            color: #464C53;
+
+            &:first-child {
+                margin-top:0;
+            }
+            .title {
+                display: inline-block;
+                width: 130px;
+                padding-left: 18px;
+                background: url('@images/common/bullet/bul_dot02.svg') no-repeat 0 50%;
+                color:#464C53;
+                font-size:17px;
+                font-weight: 700;
+            }
+        }
+    }
 }
