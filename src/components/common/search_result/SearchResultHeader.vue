@@ -16,10 +16,18 @@ const props = defineProps({
         type: Number,
         default: 0
     },
+    apiServiceCount: {
+        type: Number,
+        default: 0
+    },
+    downloadServiceCount: {
+        type: Number,
+        default: 0
+    },
     resultType: {
         type: String,
         default: 'single',
-        validator: (value) => ['single', 'public', 'provided', 'both', 'combined'].includes(value)
+        validator: (value) => ['single', 'public', 'provided', 'both', 'combined', 'api', 'download'].includes(value)
     },
     sortTypes: {
         type: Array,
@@ -37,6 +45,10 @@ const props = defineProps({
         type: Number,
         default: 0,
         validator: (value) => value >= 0 && value <= 2
+    },
+    showSortOptions: {
+        type: Boolean,
+        default: true
     }
 })
 
@@ -69,6 +81,10 @@ const getResultText = () => {
             return `공개하는 주소 <span class="searchResultHeader__count">${props.publicAddressCount}</span>건, 제공하는 주소 <span class="searchResultHeader__count">${props.providedAddressCount}</span>건`
         case 'combined':
             return `검색 결과 <span class="searchResultHeader__count">${props.totalCount}</span>건 (공개: <span class="searchResultHeader__count">${props.publicAddressCount}</span>건, 제공: <span class="searchResultHeader__count">${props.providedAddressCount}</span>건)`
+        case 'api':
+            return `API 서비스 <span class="searchResultHeader__count">${props.apiServiceCount}</span>건`
+        case 'download':
+            return `다운로드 서비스 <span class="searchResultHeader__count">${props.downloadServiceCount}</span>건`
         default:
             return `검색 결과 <span class="searchResultHeader__count">${props.totalCount}</span>건`
     }
@@ -79,7 +95,7 @@ const getResultText = () => {
     <div class="searchResultHeader">
         <div class="searchResultHeader__result" v-html="getResultText()">
         </div>
-        <div class="searchResultHeader__function">
+        <div class="searchResultHeader__function" v-if="showSortOptions">
             <strong class="searchResultHeader__title">정렬기준</strong>
             <ul class="searchResultHeader__filter">
                 <li v-for="type in sortTypes" :key="type.value">

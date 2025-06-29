@@ -122,4 +122,24 @@
             margin-top:24px;
         }
     }
+
+    &__buttonBox {
+        margin-top:24px;
+    }
+
+    &__button {
+        display: block;
+        width: 100%;
+        background-color: #F4F5F6;
+        border-radius: 12px;
+        height: 60px;
+        color: #1D1D1D;
+        font-size:17px;
+
+        .str {
+            display: inline-block;
+            padding-right:30px;
+            background: #ECF2FE url('@images/common/bullet/bul_arrow02.svg') no-repeat right 7px top 8px;
+        }
+    }
 }

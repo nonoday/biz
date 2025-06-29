@@ -232,6 +232,84 @@ const sortOptions = {
           />
         </div>
       </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">15. 정렬 옵션 없음 (showSortOptions: false)</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="85"
+            :publicAddressCount="50"
+            :providedAddressCount="35"
+            resultType="combined"
+            :showSortOptions="false"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">16. 단일 검색 결과 + 정렬 옵션 없음</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :totalCount="200"
+            :showSortOptions="false"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">17. 공개하는 주소만 표시 + 정렬 옵션 없음</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :publicAddressCount="75"
+            resultType="public"
+            :showSortOptions="false"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">18. API 서비스만 표시</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :apiServiceCount="5"
+            resultType="api"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">19. 다운로드 서비스만 표시</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :downloadServiceCount="16"
+            resultType="download"
+            @sort="handleSort"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">20. API 서비스 + 정렬 옵션 없음</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :apiServiceCount="5"
+            resultType="api"
+            :showSortOptions="false"
+          />
+        </div>
+      </div>
+
+      <div class="sample-section">
+        <h2 class="section-title">21. 다운로드 서비스 + 정렬 옵션 없음</h2>
+        <div class="sample-item">
+          <SearchResultHeader 
+            :downloadServiceCount="16"
+            resultType="download"
+            :showSortOptions="false"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>

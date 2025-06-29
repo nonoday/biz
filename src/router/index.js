@@ -251,7 +251,7 @@ const router = createRouter({
       name: '/experience/Experience',
       component: () => import('@/views/experience/Experience.vue'),
       meta: { 
-        layout: 'DefaultLayout',
+        layout: 'none',
         title: '체험하기',
         depth3: '도로명 주소 공간정보 체험하기',
         depth2: '주소정보 체험하기'

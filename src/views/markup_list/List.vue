@@ -164,7 +164,7 @@
     <tr>
       <td>속성정보 체험하기</td>
       <td>기본</td>
-      <td><a href="/experience/AttributeBasic">AttributeBasic</a></td>
+      <td><a href="/experience/Experience">Experience</a></td>
       <td></td>
       <td></td>
     </tr>
@@ -201,7 +201,7 @@
     <tr>
       <td>체험하기</td>
       <td></td>
-      <td><a href="/experience/NewExperienceBasic">NewExperienceBasic</a></td>
+      <td><a href="/experience/Experience">Experience</a></td>
       <td></td>
       <td></td>
     </tr>
