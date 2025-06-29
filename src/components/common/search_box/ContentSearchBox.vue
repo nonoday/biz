@@ -84,9 +84,9 @@
             <i aria-hidden="true" class="bi bi-x" />
           </Button>
       </div>
-      <Button class="" title="검색" @click="handleSearch">
+      <Button class="button-krds secondary middle" title="검색" @click="handleSearch">
         <i aria-hidden="true" class="bi bi-search" />
-        <span class="irText">검색</span>
+        검색
       </Button>
     </div>
 

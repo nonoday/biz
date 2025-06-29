@@ -19,6 +19,9 @@
         &.type01 {
             margin-top:98px;
         }
+        &.type02 {
+            margin-top:45px;
+        }
     }
 }
 
@@ -62,7 +65,7 @@
         padding:16px 16px 16px 44px;
         border-radius: 8px;
         border:1px solid #D8D8D8;
-        background:#F8F8F8 url('@images/common/bullet/bul_tip01.svg') no-repeat 17px 14px;
+        background:#F8F8F8 url('@images/common/bullet/bul_tip01.svg') no-repeat 17px 18px;
 
         dt {
             color:#1D1D1D;
@@ -74,5 +77,76 @@
             color:#555;
             font-size:15px;
         }
+    }
+    &__list {
+        margin-top:16px;
+        li {
+            color:#555555;
+            font-size:17px;
+        }
+    }
+    &__image {
+        margin-top:24px;
+    }
+    &__explanation {
+        margin-top:40px;
+        color: #1D1D1D;
+        font-size:24px;
+
+        .stress {
+            text-decoration: underline;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap:24px;
+        margin-top:24px;
+    }
+    &__contentBox {
+        overflow:hidden;
+        width: 555px;
+        border:1px solid #C6C6C6;
+        border-radius: 12px;
+
+        &.type01 {
+            width: 100%;
+            padding:0 0 20px;
+        }
+        &.type02 {
+            width: 362px;
+        }
+    }
+    &__contentTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        background: #EEF2F7;
+        color: #1D1D1D;
+        font-size:19px;
+        font-weight: 700;
+    }
+    &__contentInner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 298px;
+
+        &.type01 {
+            height: 318px;
+        }
+        &.type02 {
+            height: auto;
+            padding:32px 0;
+        }
+    }
+    &__contentCount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 164px;
+        font-size:19px;
+        font-weight: 700;
     }
 }

@@ -27,11 +27,11 @@
 			</dl>
 		</div>
 		<div class="sectionBox__right type01">
-			<img src="@/assets/images/policy_introduction/img_address_thing03.png" alt="사물주소 표기 샘플 이미지">
+			<img src="@/assets/images/policy_introduction/img_address_thing03.png" alt="사물주소 표기 샘플 이미지" />
 		</div>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 	@use '@/assets/scss/contents/page/introduction';
-</style>        
+</style>

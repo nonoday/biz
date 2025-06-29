@@ -2,9 +2,10 @@
 
 
 /* reset */
-html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary{margin:0;padding:0;border:0;}
+html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary{margin:0;padding:0;border:0;line-height: 150%;}
+div,p {color: #1D1D1D;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}/* HTML5 display-role reset for older browsers */
-body,html{width: 100%;height: 100%; margin: 0; padding: 0; font-family:'Noto Sans',sans-serif;font-size:16px;color: #1D1D1D;line-height: 150%;;}
+body,html{width: 100%;height: 100%; margin: 0; padding: 0; font-family:'Noto Sans',sans-serif;color: #1D1D1D;font-size:16px;}
 
 ol, ul{list-style: none;}
 table{border-collapse: collapse;border-spacing: 0;}
@@ -43,10 +44,6 @@ caption, legend {
     filter: alpha(opacity=0);
     background:none;
 }
-
-hr{overflow: hidden;position: relative;left: 0;top: 0;width: 1px;height: 1px;background: 0 0;
-font-size: 0;color: transparent;line-height: 0;text-indent: 100%; clip: rect(0, 0, 0, 0);}
-
 
 pre{word-break:break-all;white-space:pre-line;}
 li{list-style: none;}

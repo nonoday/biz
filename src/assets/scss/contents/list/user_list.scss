@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+.user {
+    &__list {
+      display: flex;  
+      flex-wrap: wrap;
+      gap:24px;
+      margin-top:40px;
+
+      li {
+        position: relative;
+        width: 282px;
+
+        
+        &.active {
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 12px;
+                border:1px solid #325EE6;
+                background: #325EE6cc url('@images/experience/bg_check.svg') no-repeat 50%;
+            }
+        }
+      }
+    }
+    &__button {
+        display: block;
+        width: 100%;
+        height: 180px;
+        padding-top:110px;
+        border-radius: 12px;
+        background-color: #F8F8F8;
+        background-position: 50% 29px;
+        background-repeat: no-repeat;
+        color:#1d1d1d;
+        font-size:17px;
+        text-align: center;
+
+        &.purpose01 {
+            background-image: url('@images/experience/img_purpose01.png');
+        }
+        &.purpose02 {
+            background-image: url('@images/experience/img_purpose02.png');
+        }
+        &.purpose03 {
+            background-image: url('@images/experience/img_purpose03.png');
+        }
+        &.purpose04 {
+            background-image: url('@images/experience/img_purpose04.png');
+        }
+        &.purpose05 {
+            background-image: url('@images/experience/img_purpose05.png');
+        }
+        &.purpose06 {
+            background-image: url('@images/experience/img_purpose06.png');
+        }
+        &.purpose07 {
+            background-image: url('@images/experience/img_purpose07.png');
+        }
+        &.purpose08 {
+            background-image: url('@images/experience/img_purpose08.png');
+        }
+        &.environment01 {
+            background-image: url('@images/experience/bg_environment01.png');
+        }
+        &.environment02 {
+            background-image: url('@images/experience/bg_environment02.png');
+        }
+        &.environment03 {
+            background-image: url('@images/experience/bg_environment03.png');
+        }
+        &.environment04 {
+            background-image: url('@images/experience/bg_environment04.png');
+        }
+        &.method01 {
+            background-image: url('@images/experience/bg_method01.png');
+        }
+        &.method02 {
+            background-image: url('@images/experience/bg_method02.png');
+        }
+        &.method03 {
+            background-image: url('@images/experience/bg_method03.png');
+        }
+        &.method04 {
+            background-image: url('@images/experience/bg_method04.png');
+        }
+        &.extension01 {
+            background-image: url('@images/experience/extension01.png');
+        }
+        &.extension02 {
+            background-image: url('@images/experience/extension02.png');
+        }
+        &.extension03 {
+            background-image: url('@images/experience/extension03.png');
+        }
+        &.extension04 {
+            background-image: url('@images/experience/extension04.png');
+        }
+        
+
+    }
+    &__title {
+        color:#555555;
+        font-size:17px;
+
+        strong {
+            color:#111;
+        }
+    }
+}
+.userSet {
+    &__list {
+        margin-top:40px;
+
+        > li + li {
+            margin-top:24px;
+        }
+
+        .user__list {
+            margin-top:24px;
+        }
+    }
+}

@@ -43,13 +43,23 @@
 .layout {
     display: flex;
     flex-direction: column;
+    min-height: 100%;
 
 
     .content {
+        position: relative;
         flex: 1;
         width: 100%;
         max-width: 1248px;
         margin: 0 auto;
         padding:0 24px 100px;
     }
+}
+
+
+.color01 {
+    color: #325EE6;
+}
+.color02 {
+    color:#CD0603;
 }

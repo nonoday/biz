@@ -32,7 +32,7 @@
 	<DetailBottomButtons
 		type="left"
 		:leftButtons="[
-			{ text: '목록으로', onClick: handleList, class: 'secondary' }
+			{ text: '목록으로', onClick: handleList, class: 'tertiary' }
 		]"
 	/>
 </template>

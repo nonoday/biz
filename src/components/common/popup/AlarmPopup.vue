@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from 'vue';
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,6 +16,7 @@ const props = defineProps({
 const emit = defineEmits(['close']);
 
 const swiper = ref(null);
+const isPlaying = ref(true);
 
 const initSwiper = () => {
     if (swiper.value) {
@@ -23,7 +24,7 @@ const initSwiper = () => {
     }
     
     swiper.value = new Swiper('.alarmPopup__swiper', {
-        modules: [Navigation, Pagination],
+        modules: [Navigation, Pagination, Autoplay],
         slidesPerView: 'auto',
         spaceBetween: 10,
         navigation: {
@@ -33,10 +34,25 @@ const initSwiper = () => {
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
+            type: 'fraction',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
         },
         observer: true,
         observeParents: true
     });
+};
+
+const togglePlay = () => {
+    if (isPlaying.value) {
+        swiper.value.autoplay.stop();
+        isPlaying.value = false;
+    } else {
+        swiper.value.autoplay.start();
+        isPlaying.value = true;
+    }
 };
 
 watch(() => props.isOpen, (newValue) => {
@@ -66,26 +82,41 @@ const closePopup = () => {
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="alarmPopup__item">
-                                <p class="alarmPopup__text">새로운 알림이 있습니다.</p>
-                                <span class="alarmPopup__date">2024.03.21</span>
+                                <p class="alarmPopup__title">시스템 점검이 예정되어 있습니다.</p>
+                                <p class="alarmPopup__text">25년 9월 도로명 신규 데이터가 업데이트 되었습니다.<br />25년 9월 도로명 신규 데이터가 업데이트 되었습니다.</p>
+                                <div class="alarmPopup__buttonBox">
+                                    <Button class="alarmPopup__button">자세히보기</Button>
+                                </div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="alarmPopup__item">
-                                <p class="alarmPopup__text">시스템 점검이 예정되어 있습니다.</p>
-                                <span class="alarmPopup__date">2024.03.20</span>
+                                <p class="alarmPopup__title">시스템 점검이 예정되어 있습니다.</p>
+                                <p class="alarmPopup__text">25년 9월 도로명 신규 데이터가 업데이트 되었습니다.<br />25년 9월 도로명 신규 데이터가 업데이트 되었습니다.</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="alarmPopup__item">
-                                <p class="alarmPopup__text">새로운 기능이 추가되었습니다.</p>
-                                <span class="alarmPopup__date">2024.03.19</span>
+                                <p class="alarmPopup__title">시스템 점검이 예정되어 있습니다.</p>
+                                <p class="alarmPopup__text">25년 9월 도로명 신규 데이터가 업데이트 되었습니다.<br />25년 9월 도로명 신규 데이터가 업데이트 되었습니다.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <div class="alarmPopup__function">
+                        <div class="swiper-pagination"></div>
+                        <div class="alarmPopup__controls">
+                            <button 
+                                type="button" 
+                                class="alarmPopup__playBtn" 
+                                @click="togglePlay"
+                                :title="isPlaying ? '정지' : '재생'"
+                            >
+                                <i :class="isPlaying ? 'bi bi-pause-fill' : 'bi bi-play-fill'"></i>
+                            </button>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -97,5 +128,5 @@ const closePopup = () => {
 </template>
 
 <style lang="scss" scoped>
-    @use '@/assets/scss/contents/layout/alarm.scss';
+    @use '@/assets/scss/contents/layout/alarm.scss';    
 </style> 

@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+.step {
+    display: flex;
+    position: absolute;
+    right:0;
+    top:120px;
+    width: 360px;
+
+    li {
+        width: 120px;
+        background: url('@images/experience/bg_step_line.png') no-repeat right 0 top 9px;
+
+        &:last-child {
+            background: none;
+        }
+    }
+
+    &__box {
+        padding-top:28px;
+        background: url('@images/experience/bg_step_off.png') no-repeat  0 7px;
+    }
+    &__notation {
+        padding-top:8px;
+        color: #333;
+        font-size:13px;
+    }
+    &__title {
+        color: #1d1d1d;
+        font-size:15px;
+        font-weight: 700;
+    }
+    li.active  &__title {
+        color: #325EE6;
+    }
+    li.active &__box {
+        background-image: url('@images/experience/bg_step_on.png');
+    }
+    li.prev &__box {
+        background-image: url('@images/experience/bg_step_prev.png');
+    }
+    &__type {
+        margin-top:48px;
+        color:#464C53;
+        font-size:15px;
+    }
+    &__current {
+        color: #325EE6;
+        font-weight: 700;
+    }
+}

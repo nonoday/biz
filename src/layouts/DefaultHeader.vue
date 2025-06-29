@@ -77,44 +77,46 @@
 
 <div class="header__wrap">
   <div class="header">
+    <div class="header__utillListWrap">
+      <ul class="header__utillList">
+        <li><Button class="button mypage">마이페이지</Button></li>
+        <li><Button class="button alarm" @click="toggleAlarmPopup" title="알림">알림</Button><span v-if="alarmCount > 0" class="header__alarmCount">{{ alarmCount }}</span></li>
+      </ul>
+    </div>
     <div class="header__inner">
       <div class="header__utill">
         <h1 class="header__logo"><a href="/" title="메인이동하기"><img src="@/assets/images/common/img_logo.png" alt="주소기반산업지원서비스" /></a></h1>
-        <ul class="header__utillList">
-          <li><Button class="button mypage">마이페이지</Button></li>
-          <li><Button class="button alarm" @click="toggleAlarmPopup" title="알림">알림</Button><span v-if="alarmCount > 0" class="header__alarmCount">{{ alarmCount }}</span></li>
+        <ul class="header__nav" id="gnb">
+          <li v-for="(menu, index) in menuData" :key="index">
+            <Button 
+              class="header__gnbButton" 
+              :class="{ active: activeMenuIndex === index }"
+              title="메뉴 열기"
+              @click.stop="toggleMenu(index)"
+              @focus="handleFocus(index)"
+              @blur="handleBlur"
+            >{{ menu.title }}</Button>
+            <div class="header__gnb" :class="{ active: activeMenuIndex === index }">
+              <dl class="header__gnbDescription">
+                <dt>{{ menu.title }}</dt>
+                <dd v-html="menu.description"></dd>
+              </dl>
+              <ul class="header__gnbList">
+                <li v-for="(item, itemIndex) in menu.items" :key="itemIndex" class="header__gnbItem">
+                  <a :href="item.link" :title="item.title" class="header__gnbLink">
+                    <div class="header__gnbTitle">{{ item.title }}</div>
+                    <p class="header__gnbText" v-html="item.text"></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
 
     <AlarmPopup :is-open="isAlarmPopupOpen" @close="closeAlarmPopup" />
 
-    <ul class="header__nav" id="gnb">
-      <li v-for="(menu, index) in menuData" :key="index">
-        <Button 
-          class="header__gnbButton" 
-          :class="{ active: activeMenuIndex === index }"
-          title="메뉴 열기"
-          @click.stop="toggleMenu(index)"
-          @focus="handleFocus(index)"
-          @blur="handleBlur"
-        >{{ menu.title }}</Button>
-        <div class="header__gnb" :class="{ active: activeMenuIndex === index }">
-          <dl class="header__gnbDescription">
-            <dt>{{ menu.title }}</dt>
-            <dd v-html="menu.description"></dd>
-          </dl>
-          <ul class="header__gnbList">
-            <li v-for="(item, itemIndex) in menu.items" :key="itemIndex" class="header__gnbItem">
-              <a :href="item.link" :title="item.title" class="header__gnbLink">
-                <div class="header__gnbTitle">{{ item.title }}</div>
-                <p class="header__gnbText" v-html="item.text"></p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
   </div>
 </div>
 

@@ -16,6 +16,15 @@
         padding-bottom:24px;
         border-bottom: 1px solid #C6C6C6;
     }
+    &__headerDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__date {
+        color:#1D1D1D;
+        font-size:17px;
+    }
 
     &__title {
         font-size:24px;
@@ -54,9 +63,6 @@
         margin-top:28px;
         font-size:15px;
     }
-    &__notice {
-        
-    }
     &__tipBox {
         display: flex;
         align-items: center;
@@ -65,7 +71,7 @@
         padding-left:44px;
         border-radius: 8px;
         border:1px solid #D8D8D8;
-        background:#F8F8F8 url('@images/common/bullet/bul_tip01.svg') no-repeat 17px 14px;
+        background:#F8F8F8 url('@images/common/bullet/bul_tip01.svg') no-repeat 17px 18px;
         font-size:17px;
 
         &.type01 {
