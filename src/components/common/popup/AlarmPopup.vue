@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from 'vue';
+import Button from 'primevue/button'
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';

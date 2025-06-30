@@ -412,6 +412,27 @@ const router = createRouter({
         depth2: '주소정보 자료제공'
       },
     },
+    {
+      path: "/data_provision/AddressApiApplication",
+      name: '/data_provision/AddressApiApplication',
+      component: () => import('@/views/data_provision/AddressApiApplication.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '팝업 API',
+        depth3: '주소정보 데이터 연계',
+        depth2: '주소정보 자료제공'
+      },
+    },    {
+      path: "/data_provision/Solution",
+      name: '/data_provision/Solution',
+      component: () => import('@/views/data_provision/Solution.vue'),
+      meta: { 
+        layout: 'DefaultLayout',
+        title: '주소검색 솔루션 소개',
+        depth3: '주소정보 솔루션 제공',
+        depth2: '주소정보 자료제공'
+      },
+    },
 
 
     

@@ -139,9 +139,9 @@
 		<div v-if="activeIndex === 0">
 			<button @click="openModal">레이어팝업</button>
 			
-			<!-- <p class="experience__resultNot">
+			<p class="experience__resultNot">
 				검색 결과가 없습니다.<br />속성정보를 선택해 데이터를 확인해보세요.
-			</p> -->
+			</p>
 			
 			<div class="experience__contentBox" style="display:none;">
 				<!-- 탭안에 내용은 채워주세요. -->

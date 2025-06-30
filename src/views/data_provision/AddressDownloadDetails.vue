@@ -77,7 +77,7 @@
 		{ label: '주소 DB', value: 'address_db' },
 		{ label: '사서함주소 DB', value: 'po_box_db' },
 		{ label: '영문도로명주소 DB', value: 'english_road_db' },
-		{ label: '상세주소 DB', value: 'detail_address_db' },
+		{ label: '건물군 내 상세주소 동 도형', value: 'detail_address_db' },
 		{ label: '도로명주소 출입구 정보', value: 'entrance_info' }
 	])
 

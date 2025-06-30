@@ -114,9 +114,6 @@ body {
             background-size: 14px 8px;
         }
     }
-    &__lnbItemList {
-
-    }
     &__lnbInnerItem {
         height: 42px;
         padding-left: 12px;
@@ -156,7 +153,39 @@ body {
         color: #8E8E8E;
         font-size:19px;
         text-align: center;
+    }
+    
+    &__introduction {
+        display: flex;
+        gap:40px;
+        margin-top:48px;
+    }
+    &__introductionImage {
+        width: 580px;
+    }
+    &__introductionInfo {
+        padding-top:24px;
+        dt {
+            color:#1D1D1D;
+            font-size:32px;
+            font-weight: 700;
+        }
+        dd {
+            margin-top:8px;
+            color:#555;
+            font-size:17px;
+            word-break: keep-all;
+        }
+    }
+    &__introductionButton {
+        margin-top:24px;
 
+        button {
+            padding-right:34px;
+            background-image: url('@images/common/bullet/bul_arrow05.svg');
+            background-repeat:  no-repeat;
+            background-position: right 17px top 50%;
+        }
     }
 }
 

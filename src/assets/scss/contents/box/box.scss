@@ -79,6 +79,22 @@
             height: auto;
             padding:16px 16px 16px 44px;
             background-position: 17px 17px;
+
+        }
+
+        &.type02 {
+            margin-top:16px;
+        }
+        &.type03 {
+            align-items: flex-start;
+            height: auto;
+            padding:16px 16px 16px 44px;
+            background-position: 17px 17px;
+
+            .commonBox__informationList li {
+                margin-top:8px;
+                &:first-child {margin:0;}
+            }
         }
     }
 
@@ -97,8 +113,6 @@
     &__number {
         color:#CC0502;
     }
-
-
 
     &__explanation {
         display: flex;
@@ -171,6 +185,14 @@
             background: url('@images/common/bullet/bul_dot01.svg') no-repeat 0 10px / 4px;
             font-size:17px;
         }
+
+        &.type01 {
+            margin-top:24px;
+            li {
+                margin-top:0;
+                color: #1D1D1D;
+            }
+        }
     }
 
     &__download {
@@ -187,6 +209,10 @@
         & + .commonBox__download {
             margin-top:16px;
         }
+
+        &.type01 {
+            margin:16px 0;
+        }
     }
     &__downloadTitle {
         font-size:17px;
@@ -201,5 +227,33 @@
     &__image {
         margin-top:24px;
         font-size:0;
+    }
+
+    &__infoList {
+        display: flex;
+        gap:16px;
+        margin-top:40px;
+        
+        li {
+            .commonBox {margin:0;}
+        }
+    }
+
+    &__info {
+        margin-top:16px;
+
+        dt {
+            color:#1D1D1D;
+            font-size:19px;
+            font-weight: 700;
+        }
+
+        dd {
+            margin:12px 0 0 5px;
+            padding-left: 12px;
+            background: url('@images/common/bullet/bul_dot03.svg') no-repeat 0 50%;
+            color:#555;
+            font-size:17px;
+        }
     }
 }

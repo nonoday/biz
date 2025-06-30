@@ -48,9 +48,12 @@
         padding:16px 12px 16px 20px;
     }
     &__categoryList {
+        li {
+            display: flex;
+        }
         li + li {margin-top:8px;}
         label {
-            letter-spacing: -1px;
+            margin-top: -3px;
         }
     }
     &__calendar {

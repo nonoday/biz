@@ -341,7 +341,7 @@
       <td><a href="/data_provision/Solution">Solution</a></td>
       <td></td>
       <td></td>
-      <td></td>
+      <td>리눅스 영역 컨텐츠 넣어야함.</td>
     </tr>
     <tr>
       <td>주소검색솔루션 다운로드</td>
